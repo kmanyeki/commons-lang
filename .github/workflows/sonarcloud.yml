@@ -40,11 +40,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-m2
 
-      - name: Build with Maven and generate Jacoco report
+      - name: Build with Maven and prepare Jacoco
         run: |
-          mvn -B clean verify \
-            -Pcoverage \
-            -Djacoco.output=target/site/jacoco/jacoco.xml
+          mvn -B clean test org.jacoco:jacoco-maven-plugin:prepare-agent
+
+      - name: Generate Jacoco report
+        run: |
+          mvn -B org.jacoco:jacoco-maven-plugin:report
 
       - name: Analyze with SonarQube
         env:
@@ -54,4 +56,3 @@ jobs:
           mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
             -Dsonar.projectKey=kmanyeki_commons-lang \
             -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
-
