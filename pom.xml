@@ -123,6 +123,8 @@
     <project.build.outputTimestamp>2024-08-29T19:40:12Z</project.build.outputTimestamp>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <sonar.organization>kmanyeki</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <!--
        This is also  used to generate download_xxx file name.
        To override this when generating the download page:
