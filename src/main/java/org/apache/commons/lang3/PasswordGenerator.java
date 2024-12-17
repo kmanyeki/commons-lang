@@ -19,6 +19,7 @@
 package org.apache.commons.lang3;
 
 
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class PasswordGenerator {
@@ -37,7 +38,8 @@ public class PasswordGenerator {
     // Main method: interactive CLI
     public static void main(String[] args) {
         System.out.println("Welcome to the Password Generator App!");
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
+
 
         // User input for password criteria
         System.out.println("Enter desired password length (8-20): ");
