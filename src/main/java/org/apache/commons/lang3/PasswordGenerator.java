@@ -16,8 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.commons.lang3;
 
+package org.apache.commons.lang3;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -38,8 +38,8 @@ public class PasswordGenerator {
     // Main method: interactive CLI
     public static void main(String[] args) {
         System.out.println("Welcome to the Password Generator App!");
-        Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
-
+        // Use charset name as a String
+        Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8.name());
 
         // User input for password criteria
         System.out.println("Enter desired password length (8-20): ");
