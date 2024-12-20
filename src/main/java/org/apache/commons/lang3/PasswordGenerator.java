@@ -19,48 +19,105 @@
 
 package org.apache.commons.lang3;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
+/**
+ * Utility class for generating and validating passwords.
+ */
 public class PasswordGenerator {
 
-    // Method to generate random passwords
-    public static String generatePassword(int length, boolean useLetters, boolean useNumbers) {
-        Validate.inclusiveBetween(8, 20, length, "Password length must be between 8 and 20 characters.");
-        return RandomStringUtils.random(length, useLetters, useNumbers);
-    }
-
-    // Method to validate user input
-    public static boolean validatePassword(String password) {
-        return StringUtils.isNotBlank(password) && password.length() >= 8 && password.length() <= 20;
-    }
-
-    // Main method: interactive CLI
-    public static void main(String[] args) {
-        System.out.println("Welcome to the Password Generator App!");
-        // Use charset name as a String
-        Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8.name());
-
-        // User input for password criteria
-        System.out.println("Enter desired password length (8-20): ");
-        int length = scanner.nextInt();
-        System.out.println("Include letters? (true/false): ");
-        boolean useLetters = scanner.nextBoolean();
-        System.out.println("Include numbers? (true/false): ");
-        boolean useNumbers = scanner.nextBoolean();
-
-        // Generate and display password
-        String password = generatePassword(length, useLetters, useNumbers);
-        System.out.println("Generated Password: " + password);
-
-        // Validation check
-        System.out.println("Validating password...");
-        if (validatePassword(password)) {
-            System.out.println("Password is valid!");
-        } else {
-            System.out.println("Password is invalid!");
+    /**
+     * Generates a random password.
+     *
+     * @param length the length of the password
+     * @param useLetters whether to include letters (yes/no)
+     * @param useNumbers whether to include numbers (yes/no)
+     * @return the generated password
+     * @throws IllegalArgumentException if invalid parameters are provided
+     */
+    public static String generatePassword(int length, String useLetters, String useNumbers) {
+        if (length <= 0) {
+            throw new IllegalArgumentException("Password length must be greater than 0.");
         }
 
-        scanner.close();
+        boolean includeLetters = "yes".equalsIgnoreCase(useLetters);
+        boolean includeNumbers = "yes".equalsIgnoreCase(useNumbers);
+
+        if (!includeLetters && !includeNumbers) {
+            throw new IllegalArgumentException("At least one of useLetters or useNumbers must be 'yes'.");
+        }
+
+        StringBuilder password = new StringBuilder(length);
+        String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String numbers = "0123456789";
+        String chars = (includeLetters ? letters : "") + (includeNumbers ? numbers : "");
+
+        for (int i = 0; i < length; i++) {
+            password.append(chars.charAt((int) (Math.random() * chars.length())));
+        }
+
+        return password.toString();
+    }
+
+    /**
+     * Validates the provided password against the generation criteria.
+     *
+     * @param password the password to validate
+     * @param useLetters whether letters are required (yes/no)
+     * @param useNumbers whether numbers are required (yes/no)
+     * @return "yes" if the password is valid, "no" otherwise
+     */
+    public static String validatePassword(String password, String useLetters, String useNumbers) {
+        if (password == null || password.isEmpty()) {
+            return "no";
+        }
+
+        boolean includeLetters = "yes".equalsIgnoreCase(useLetters);
+        boolean includeNumbers = "yes".equalsIgnoreCase(useNumbers);
+
+        boolean hasLetter = password.matches(".*[a-zA-Z].*");
+        boolean hasNumber = password.matches(".*[0-9].*");
+
+        if (includeLetters && !hasLetter) {
+            return "no";
+        }
+
+        if (includeNumbers && !hasNumber) {
+            return "no";
+        }
+
+        return "yes";
+    }
+
+    /**
+     * Main method for testing the PasswordGenerator functionality.
+     *
+     * @param args command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter password length: ");
+            int length = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            System.out.print("Use letters? (yes/no): ");
+            String useLetters = scanner.nextLine();
+
+            System.out.print("Use numbers? (yes/no): ");
+            String useNumbers = scanner.nextLine();
+
+            String password = generatePassword(length, useLetters, useNumbers);
+            System.out.println("Generated Password: " + password);
+
+            String validationResult = validatePassword(password, useLetters, useNumbers);
+            System.out.println("Generated Password Validation: " + validationResult);
+
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error: " + e.getMessage());
+        } finally {
+            scanner.close();
+        }
     }
 }
