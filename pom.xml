@@ -198,6 +198,11 @@
             <rulesets>
               <ruleset>src/conf/pmd-ruleset.xml</ruleset>
             </rulesets>
+            <archive>
+              <manifest>
+                <mainClass>org.apache.commons.lang3.PasswordGenerator</mainClass>
+              </manifest>
+            </archive>
           </configuration>
         </plugin>
         <plugin>
