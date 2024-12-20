@@ -20,7 +20,6 @@
 package org.apache.commons.lang3;
 
 import java.util.Scanner;
-import java.nio.charset.StandardCharsets;
 
 /**
  * Utility class for generating and validating passwords.
@@ -96,7 +95,7 @@ public class PasswordGenerator {
      * @param args command line arguments
      */
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in, "UTF-8");
+        Scanner scanner = new Scanner(System.in);
 
         try {
             System.out.print("Enter password length: ");
