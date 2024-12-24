@@ -1,9 +1,9 @@
-name: Docker Build and Push
+name: Docker Build and Push with Versioning
 
 on:
   push:
     branches:
-      - master  # Trigger the workflow on pushes to the master branch
+      - master  # Trigger workflow on pushes to the master branch
 
 jobs:
   build-and-push:
@@ -22,10 +22,19 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # Step 3: Build the Docker image
-      - name: Build Docker Image
-        run: docker build -t manyeki/password-generator-app:latest .
+      # Step 3: Get the Git commit SHA for versioning
+      - name: Extract Git Commit SHA
+        id: git-info
+        run: echo "::set-output name=sha::$(git rev-parse --short HEAD)"
 
-      # Step 4: Push the Docker image to DockerHub
-      - name: Push Docker Image
-        run: docker push manyeki/password-generator-app:latest
+      # Step 4: Build the Docker image
+      - name: Build Docker Image
+        run: |
+          docker build -t manyeki/password-generator-app:latest .
+          docker tag manyeki/password-generator-app:latest manyeki/password-generator-app:${{ steps.git-info.outputs.sha }}
+
+      # Step 5: Push the Docker images to DockerHub
+      - name: Push Docker Images
+        run: |
+          docker push manyeki/password-generator-app:latest
+          docker push manyeki/password-generator-app:${{ steps.git-info.outputs.sha }}
