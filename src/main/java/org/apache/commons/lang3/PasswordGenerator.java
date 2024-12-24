@@ -95,7 +95,9 @@ public class PasswordGenerator {
      * @param args command line arguments
      */
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in, "UTF-8");
+        //Scanner scanner = new Scanner(inputStream, );
+
 
         try {
             System.out.print("Enter password length: ");
