@@ -19,11 +19,12 @@
 
 package org.apache.commons.lang3;
 
-import java.util.Scanner;
-
 /**
  * Utility class for generating and validating passwords.
  */
+
+import java.util.Scanner;
+
 public class PasswordGenerator {
 
     /**
@@ -95,11 +96,7 @@ public class PasswordGenerator {
      * @param args command line arguments
      */
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in, "UTF-8");
-        //Scanner scanner = new Scanner(inputStream, );
-
-
-        try {
+        try (Scanner scanner = new Scanner(System.in, "UTF-8")) { // Use try-with-resources here
             System.out.print("Enter password length: ");
             int length = scanner.nextInt();
             scanner.nextLine(); // Consume newline
@@ -115,11 +112,8 @@ public class PasswordGenerator {
 
             String validationResult = validatePassword(password, useLetters, useNumbers);
             System.out.println("Generated Password Validation: " + validationResult);
-
         } catch (IllegalArgumentException e) {
             System.err.println("Error: " + e.getMessage());
-        } finally {
-            scanner.close();
         }
     }
 }
