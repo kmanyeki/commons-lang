@@ -19,23 +19,17 @@
 
 package org.apache.commons.lang3;
 
-/**
- * Utility class for generating and validating passwords.
- */
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class PasswordGenerator {
 
-    /**
-     * Generates a random password.
-     *
-     * @param length the length of the password
-     * @param useLetters whether to include letters (yes/no)
-     * @param useNumbers whether to include numbers (yes/no)
-     * @return the generated password
-     * @throws IllegalArgumentException if invalid parameters are provided
-     */
+    // SLF4J Logger instance
+    private static final Logger logger = LoggerFactory.getLogger(PasswordGenerator.class);
+
     public static String generatePassword(int length, String useLetters, String useNumbers) {
         if (length <= 0) {
             throw new IllegalArgumentException("Password length must be greater than 0.");
@@ -53,21 +47,14 @@ public class PasswordGenerator {
         String numbers = "0123456789";
         String chars = (includeLetters ? letters : "") + (includeNumbers ? numbers : "");
 
+        Random random = new Random();
         for (int i = 0; i < length; i++) {
-            password.append(chars.charAt((int) (Math.random() * chars.length())));
+            password.append(chars.charAt(random.nextInt(chars.length())));
         }
 
         return password.toString();
     }
 
-    /**
-     * Validates the provided password against the generation criteria.
-     *
-     * @param password the password to validate
-     * @param useLetters whether letters are required (yes/no)
-     * @param useNumbers whether numbers are required (yes/no)
-     * @return "yes" if the password is valid, "no" otherwise
-     */
     public static String validatePassword(String password, String useLetters, String useNumbers) {
         if (password == null || password.isEmpty()) {
             return "no";
@@ -77,7 +64,7 @@ public class PasswordGenerator {
         boolean includeNumbers = "yes".equalsIgnoreCase(useNumbers);
 
         boolean hasLetter = password.matches(".*[a-zA-Z].*");
-        boolean hasNumber = password.matches(".*[0-9].*");
+        boolean hasNumber = password.matches(".*\\d.*"); // Use concise character class '\\d'
 
         if (includeLetters && !hasLetter) {
             return "no";
@@ -90,30 +77,25 @@ public class PasswordGenerator {
         return "yes";
     }
 
-    /**
-     * Main method for testing the PasswordGenerator functionality.
-     *
-     * @param args command line arguments
-     */
     public static void main(String[] args) {
-        try (Scanner scanner = new Scanner(System.in, "UTF-8")) { // Use try-with-resources here
-            System.out.print("Enter password length: ");
+        try (Scanner scanner = new Scanner(System.in, "UTF-8")) {
+            logger.info("Enter password length: ");
             int length = scanner.nextInt();
             scanner.nextLine(); // Consume newline
 
-            System.out.print("Use letters? (yes/no): ");
+            logger.info("Use letters? (yes/no): ");
             String useLetters = scanner.nextLine();
 
-            System.out.print("Use numbers? (yes/no): ");
+            logger.info("Use numbers? (yes/no): ");
             String useNumbers = scanner.nextLine();
 
             String password = generatePassword(length, useLetters, useNumbers);
-            System.out.println("Generated Password: " + password);
+            logger.info("Generated Password: {}", password);
 
             String validationResult = validatePassword(password, useLetters, useNumbers);
-            System.out.println("Generated Password Validation: " + validationResult);
+            logger.info("Generated Password Validation: {}", validationResult);
         } catch (IllegalArgumentException e) {
-            System.err.println("Error: " + e.getMessage());
+            logger.error("Error: {}", e.getMessage());
         }
     }
 }
