@@ -22,27 +22,19 @@ package org.apache.commons.lang3;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
 public class PasswordGenerator {
-
     private static final Logger logger = LoggerFactory.getLogger(PasswordGenerator.class);
+    private static final Random RANDOM = new Random();
+    private static final int MIN_PASSWORD_LENGTH = 7;
 
-    /**
-     * Generates a random password with guaranteed inclusion of requested character types.
-     *
-     * @param length          the length of the password (must be at least 7)
-     * @param useLetters      whether to include letters
-     * @param useNumbers      whether to include numbers
-     * @param useSpecialChars whether to include special characters
-     * @return the generated password
-     */
     public static String generatePassword(int length, boolean useLetters, boolean useNumbers, boolean useSpecialChars) {
-        if (length < 7) {
-            throw new IllegalArgumentException("Password length must be at least 7.");
+        if (length < MIN_PASSWORD_LENGTH) {
+            throw new IllegalArgumentException("Password length must be at least " + MIN_PASSWORD_LENGTH + ".");
         }
-
         if (!useLetters && !useNumbers && !useSpecialChars) {
             throw new IllegalArgumentException("At least one of useLetters, useNumbers, or useSpecialChars must be true.");
         }
@@ -51,98 +43,84 @@ public class PasswordGenerator {
         String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String numbers = "0123456789";
         String specialChars = "!@#$%^&*()-_=+[]{}|;:,.<>?";
-        Random random = new Random();
 
-        // Ensure inclusion of at least one character from each requested category
-        if (useLetters) {
-            password.append(letters.charAt(random.nextInt(letters.length())));
-        }
-        if (useNumbers) {
-            password.append(numbers.charAt(random.nextInt(numbers.length())));
-        }
-        if (useSpecialChars) {
-            password.append(specialChars.charAt(random.nextInt(specialChars.length())));
-        }
+        if (useLetters) addRandomChar(letters, password);
+        if (useNumbers) addRandomChar(numbers, password);
+        if (useSpecialChars) addRandomChar(specialChars, password);
 
-        // Fill the rest of the password with random characters
-        String chars = (useLetters ? letters : "") + (useNumbers ? numbers : "") + (useSpecialChars ? specialChars : "");
-        for (int i = password.length(); i < length; i++) {
-            password.append(chars.charAt(random.nextInt(chars.length())));
+        String allChars = "";
+        if (useLetters) allChars += letters;
+        if (useNumbers) allChars += numbers;
+        if (useSpecialChars) allChars += specialChars;
+
+        while (password.length() < length) {
+            password.append(allChars.charAt(RANDOM.nextInt(allChars.length())));
         }
 
-        return shuffleString(password.toString(), random);
+        logger.info("Generated password: {}", password);
+        return password.toString();
     }
 
-    /**
-     * Shuffles the characters in a string.
-     *
-     * @param input  the string to shuffle
-     * @param random the Random object for shuffling
-     * @return the shuffled string
-     */
-    private static String shuffleString(String input, Random random) {
-        char[] characters = input.toCharArray();
-        for (int i = characters.length - 1; i > 0; i--) {
-            int index = random.nextInt(i + 1);
-            char temp = characters[i];
-            characters[i] = characters[index];
-            characters[index] = temp;
-        }
-        return new String(characters);
-    }
-
-    /**
-     * Prompts the user for a "yes" or "no" response and validates the input.
-     *
-     * @param scanner the Scanner object for user input
-     * @param prompt  the prompt message to display
-     * @return the boolean equivalent of the "yes" or "no" response
-     */
-    private static boolean getYesNoInput(Scanner scanner, String prompt) {
-        String input;
-        while (true) {
-            logger.info(prompt);
-            input = scanner.nextLine().trim().toLowerCase();
-            if ("yes".equals(input)) {
-                return true;
-            } else if ("no".equals(input)) {
-                return false;
-            } else {
-                logger.warn("Invalid input. Please enter 'yes' or 'no'.");
-            }
+    private static void addRandomChar(String source, StringBuilder password) {
+        if (!source.isEmpty()) {
+            password.append(source.charAt(RANDOM.nextInt(source.length())));
         }
     }
 
     public static void main(String[] args) {
-        try (Scanner scanner = new Scanner(System.in, "UTF-8")) {
+        try (Scanner scanner = new Scanner(System.in)) {
             int length = 0;
-            while (length < 7) {
-                logger.info("Enter password length (minimum 7): ");
-                if (scanner.hasNextInt()) {
+            boolean useLetters = false, useNumbers = false, useSpecialChars = false;
+
+            while (true) {
+                try {
+                    System.out.println("Enter password length (at least 7):");
                     length = scanner.nextInt();
-                    if (length < 7) {
-                        logger.warn("Password length must be at least 7. Please try again.");
+                    if (length < MIN_PASSWORD_LENGTH) {
+                        throw new IllegalArgumentException("Password length must be at least " + MIN_PASSWORD_LENGTH + ".");
                     }
-                } else {
-                    logger.error("Invalid input. Please enter a valid number.");
-                    scanner.next(); // Consume invalid input
+                    break; // Valid input; exit loop
+                } catch (InputMismatchException e) {
+                    System.out.println("Invalid input. Please enter a valid number.");
+                    logger.error("Invalid input for password length: {}", e.getMessage());
+                    scanner.next(); // Clear invalid input
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
+                    logger.error("Error: {}", e.getMessage());
                 }
             }
-            scanner.nextLine(); // Consume the newline
 
-            boolean useLetters = getYesNoInput(scanner, "Use letters? (yes/no): ");
-            boolean useNumbers = getYesNoInput(scanner, "Use numbers? (yes/no): ");
-            boolean useSpecialChars = getYesNoInput(scanner, "Use special characters? (yes/no): ");
+            while (true) {
+                try {
+                    System.out.println("Include letters? (true/false):");
+                    useLetters = scanner.nextBoolean();
 
-            try {
-                String password = generatePassword(length, useLetters, useNumbers, useSpecialChars);
-                logger.info("Generated Password: {}", password);
-            } catch (IllegalArgumentException e) {
-                logger.error("Error generating password: {}", e.getMessage());
+                    System.out.println("Include numbers? (true/false):");
+                    useNumbers = scanner.nextBoolean();
+
+                    System.out.println("Include special characters? (true/false):");
+                    useSpecialChars = scanner.nextBoolean();
+
+                    if (!useLetters && !useNumbers && !useSpecialChars) {
+                        throw new IllegalArgumentException("At least one character type must be selected.");
+                    }
+                    break; // Valid input; exit loop
+                } catch (InputMismatchException e) {
+                    System.out.println("Invalid input. Please enter 'true' or 'false'.");
+                    logger.error("Invalid boolean input: {}", e.getMessage());
+                    scanner.next(); // Clear invalid input
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
+                    logger.error("Error: {}", e.getMessage());
+                }
             }
 
+            String password = generatePassword(length, useLetters, useNumbers, useSpecialChars);
+            System.out.println("Generated Password: " + password);
         } catch (Exception e) {
-            logger.error("Unexpected error occurred: {}", e.getMessage());
+            logger.error("Unexpected error: {}", e.getMessage());
+            System.out.println("An unexpected error occurred: " + e.getMessage());
         }
     }
 }
+

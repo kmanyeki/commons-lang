@@ -25,36 +25,64 @@ import static org.junit.jupiter.api.Assertions.*;
 class PasswordGeneratorTest {
 
     @Test
-    void testGeneratePasswordWithAllCharacterTypes() {
-        String password = PasswordGenerator.generatePassword(12, true, true, true);
-        assertNotNull(password);
-        assertEquals(12, password.length());
-        assertTrue(password.matches(".*[a-zA-Z].*"), "Password should contain at least one letter");
-        assertTrue(password.matches(".*\\d.*"), "Password should contain at least one number");
-        assertTrue(password.matches(".*[!@#$%^&*()-_=+\\[\\]{}|;:,.<>?].*"), "Password should contain at least one special character");
+    void testGeneratePassword_validInput() {
+        // Test generating a password with all character types and valid length
+        String password = PasswordGenerator.generatePassword(10, true, true, true);
+        assertNotNull(password, "Password should not be null");
+        assertEquals(10, password.length(), "Password length should match the requested length");
     }
 
     @Test
-    void testGeneratePasswordWithOnlyLetters() {
-        String password = PasswordGenerator.generatePassword(10, true, false, false);
-        assertNotNull(password);
-        assertEquals(10, password.length());
+    void testGeneratePassword_minimumLength() {
+        // Test the minimum allowed password length
+        String password = PasswordGenerator.generatePassword(7, true, true, true);
+        assertNotNull(password, "Password should not be null");
+        assertEquals(7, password.length(), "Password length should match the minimum length");
+    }
+
+    @Test
+    void testGeneratePassword_lettersOnly() {
+        // Test password with only letters
+        String password = PasswordGenerator.generatePassword(12, true, false, false);
         assertTrue(password.matches("[a-zA-Z]+"), "Password should contain only letters");
     }
 
     @Test
-    void testGeneratePasswordWithInvalidLength() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () ->
-                PasswordGenerator.generatePassword(6, true, true, true)
-        );
+    void testGeneratePassword_numbersOnly() {
+        // Test password with only numbers
+        String password = PasswordGenerator.generatePassword(12, false, true, false);
+        assertTrue(password.matches("[0-9]+"), "Password should contain only numbers");
+    }
+
+    @Test
+    void testGeneratePassword_specialCharsOnly() {
+        // Test password with only special characters
+        String password = PasswordGenerator.generatePassword(12, false, false, true);
+        assertTrue(password.matches("[!@#$%^&*()\\-_=+\\[\\]{}|;:,.<>?]+"), "Password should contain only special characters");
+    }
+
+    @Test
+    void testGeneratePassword_mixedTypes() {
+        // Test password with a mix of letters, numbers, and special characters
+        String password = PasswordGenerator.generatePassword(15, true, true, true);
+        assertTrue(password.matches(".*[a-zA-Z].*"), "Password should contain letters");
+        assertTrue(password.matches(".*[0-9].*"), "Password should contain numbers");
+        assertTrue(password.matches(".*[!@#$%^&*()\\-_=+\\[\\]{}|;:,.<>?].*"), "Password should contain special characters");
+    }
+
+    @Test
+    void testGeneratePassword_invalidLength() {
+        // Test that an exception is thrown for invalid length
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
+                () -> PasswordGenerator.generatePassword(6, true, true, true));
         assertEquals("Password length must be at least 7.", exception.getMessage());
     }
 
     @Test
-    void testGeneratePasswordWithNoCharacterTypes() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () ->
-                PasswordGenerator.generatePassword(10, false, false, false)
-        );
+    void testGeneratePassword_noCharacterTypesSelected() {
+        // Test that an exception is thrown if no character types are selected
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
+                () -> PasswordGenerator.generatePassword(10, false, false, false));
         assertEquals("At least one of useLetters, useNumbers, or useSpecialChars must be true.", exception.getMessage());
     }
 }
