@@ -19,12 +19,12 @@
 
 package org.apache.commons.lang3;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.InputMismatchException; // Correct order
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class PasswordGenerator {
     private static final Logger logger = LoggerFactory.getLogger(PasswordGenerator.class);
@@ -44,9 +44,15 @@ public class PasswordGenerator {
         String numbers = "0123456789";
         String specialChars = "!@#$%^&*()-_=+[]{}|;:,.<>?";
 
-        if (useLetters) addRandomChar(letters, password);
-        if (useNumbers) addRandomChar(numbers, password);
-        if (useSpecialChars) addRandomChar(specialChars, password);
+        if (useLetters) {
+            addRandomChar(letters, password);
+        }
+        if (useNumbers) {
+            addRandomChar(numbers, password);
+        }
+        if (useSpecialChars) {
+            addRandomChar(specialChars, password);
+        }
 
         String allChars = "";
         if (useLetters) allChars += letters;
@@ -123,4 +129,3 @@ public class PasswordGenerator {
         }
     }
 }
-
