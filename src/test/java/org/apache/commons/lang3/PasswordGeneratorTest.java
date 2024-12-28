@@ -25,80 +25,36 @@ import static org.junit.jupiter.api.Assertions.*;
 class PasswordGeneratorTest {
 
     @Test
-    void testGeneratePasswordValidInput() {
-        // Generate a password of length 10 with letters and numbers
-        String password = PasswordGenerator.generatePassword(10, "yes", "yes");
+    void testGeneratePasswordWithAllCharacterTypes() {
+        String password = PasswordGenerator.generatePassword(12, true, true, true);
+        assertNotNull(password);
+        assertEquals(12, password.length());
+        assertTrue(password.matches(".*[a-zA-Z].*"), "Password should contain at least one letter");
+        assertTrue(password.matches(".*\\d.*"), "Password should contain at least one number");
+        assertTrue(password.matches(".*[!@#$%^&*()-_=+\\[\\]{}|;:,.<>?].*"), "Password should contain at least one special character");
+    }
+
+    @Test
+    void testGeneratePasswordWithOnlyLetters() {
+        String password = PasswordGenerator.generatePassword(10, true, false, false);
+        assertNotNull(password);
         assertEquals(10, password.length());
-        assertTrue(password.matches(".*[a-zA-Z].*")); // Contains letters
-        assertTrue(password.matches(".*\\d.*"));     // Contains numbers
+        assertTrue(password.matches("[a-zA-Z]+"), "Password should contain only letters");
     }
 
     @Test
-    void testGeneratePasswordOnlyLetters() {
-        // Generate a password of length 8 with only letters
-        String password = PasswordGenerator.generatePassword(8, "yes", "no");
-        assertEquals(8, password.length());
-        assertTrue(password.matches(".*[a-zA-Z].*")); // Contains letters
-        assertFalse(password.matches(".*\\d.*"));     // No numbers
-    }
-
-    @Test
-    void testGeneratePasswordOnlyNumbers() {
-        // Generate a password of length 6 with only numbers
-        String password = PasswordGenerator.generatePassword(6, "no", "yes");
-        assertEquals(6, password.length());
-        assertTrue(password.matches(".*\\d.*"));      // Contains numbers
-        assertFalse(password.matches(".*[a-zA-Z].*")); // No letters
-    }
-
-    @Test
-    void testGeneratePasswordInvalidLength() {
-        // Generate a password with invalid length (e.g., 0)
+    void testGeneratePasswordWithInvalidLength() {
         Exception exception = assertThrows(IllegalArgumentException.class, () ->
-                PasswordGenerator.generatePassword(0, "yes", "yes"));
-        assertEquals("Password length must be greater than 0.", exception.getMessage());
+                PasswordGenerator.generatePassword(6, true, true, true)
+        );
+        assertEquals("Password length must be at least 7.", exception.getMessage());
     }
 
     @Test
-    void testGeneratePasswordNoOptions() {
-        // Generate a password without letters or numbers
+    void testGeneratePasswordWithNoCharacterTypes() {
         Exception exception = assertThrows(IllegalArgumentException.class, () ->
-                PasswordGenerator.generatePassword(8, "no", "no"));
-        assertEquals("At least one of useLetters or useNumbers must be 'yes'.", exception.getMessage());
-    }
-
-    @Test
-    void testValidatePasswordValid() {
-        // Validate a valid password
-        String password = "abc123";
-        assertEquals("yes", PasswordGenerator.validatePassword(password, "yes", "yes"));
-    }
-
-    @Test
-    void testValidatePasswordMissingLetters() {
-        // Validate a password missing letters
-        String password = "123456";
-        assertEquals("no", PasswordGenerator.validatePassword(password, "yes", "no"));
-    }
-
-    @Test
-    void testValidatePasswordMissingNumbers() {
-        // Validate a password missing numbers
-        String password = "abcdef";
-        assertEquals("no", PasswordGenerator.validatePassword(password, "no", "yes"));
-    }
-
-    @Test
-    void testValidatePasswordEmpty() {
-        // Validate an empty password
-        assertEquals("no", PasswordGenerator.validatePassword("", "yes", "yes"));
-    }
-
-    @Test
-    void testValidatePasswordNull() {
-        // Validate a null password
-        assertEquals("no", PasswordGenerator.validatePassword(null, "yes", "yes"));
+                PasswordGenerator.generatePassword(10, false, false, false)
+        );
+        assertEquals("At least one of useLetters, useNumbers, or useSpecialChars must be true.", exception.getMessage());
     }
 }
-
-
