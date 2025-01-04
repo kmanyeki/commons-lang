@@ -19,16 +19,16 @@
 
 package org.apache.commons.lang3;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.InputMismatchException; // Correct order
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class PasswordGenerator {
     private static final Logger logger = LoggerFactory.getLogger(PasswordGenerator.class);
-    private static final Random RANDOM = new Random();
+    private static final Random random = new Random();
     private static final int MIN_PASSWORD_LENGTH = 7;
 
     public static String generatePassword(int length, boolean useLetters, boolean useNumbers, boolean useSpecialChars) {
@@ -45,32 +45,32 @@ public class PasswordGenerator {
         String specialChars = "!@#$%^&*()-_=+[]{}|;:,.<>?";
 
         if (useLetters) {
-            addRandomChar(letters, password);
+            password.append(letters.charAt(random.nextInt(letters.length())));
         }
         if (useNumbers) {
-            addRandomChar(numbers, password);
+            password.append(numbers.charAt(random.nextInt(numbers.length())));
         }
         if (useSpecialChars) {
-            addRandomChar(specialChars, password);
+            password.append(specialChars.charAt(random.nextInt(specialChars.length())));
         }
 
         String allChars = "";
-        if (useLetters) allChars += letters;
-        if (useNumbers) allChars += numbers;
-        if (useSpecialChars) allChars += specialChars;
+        if (useLetters) {
+            allChars += letters;
+        }
+        if (useNumbers) {
+            allChars += numbers;
+        }
+        if (useSpecialChars) {
+            allChars += specialChars;
+        }
 
         while (password.length() < length) {
-            password.append(allChars.charAt(RANDOM.nextInt(allChars.length())));
+            password.append(allChars.charAt(random.nextInt(allChars.length())));
         }
 
         logger.info("Generated password: {}", password);
         return password.toString();
-    }
-
-    private static void addRandomChar(String source, StringBuilder password) {
-        if (!source.isEmpty()) {
-            password.append(source.charAt(RANDOM.nextInt(source.length())));
-        }
     }
 
     public static void main(String[] args) {
