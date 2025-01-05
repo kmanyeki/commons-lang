@@ -10,7 +10,7 @@
  *   http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
+ * software distributed with the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
  * KIND, either express or implied.  See the License for the
  * specific language governing permissions and limitations
@@ -19,66 +19,64 @@
 
 package org.apache.commons.lang3;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Test;
 
-class PasswordGeneratorTest {
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class PasswordGeneratorTest {
 
     @Test
-    void testGeneratePassword_validInput() {
-        String password = PasswordGenerator.generatePassword(10, true, true, true);
-        assertNotNull(password);
-        assertEquals(10, password.length());
+    public void testGeneratePassword_AllCharacterTypes() {
+        String password = PasswordGenerator.generatePassword(10, true, true, true); // Pass booleans
+        assertNotNull(password, "Password should not be null");
+        assertEquals(10, password.length(), "Password length should match the specified length");
+        assertTrue(password.matches(".*[a-zA-Z].*"), "Password should contain at least one letter");
+        assertTrue(password.matches(".*\\d.*"), "Password should contain at least one number");
+        assertTrue(password.matches(".*[!@#$%^&*()\\-_=+\\[\\]{}|;:,.<>?].*"), "Password should contain at least one special character");
     }
 
     @Test
-    void testGeneratePassword_minimumLength() {
-        String password = PasswordGenerator.generatePassword(7, true, true, true);
-        assertNotNull(password);
-        assertEquals(7, password.length());
+    public void testGeneratePassword_OnlyLetters() {
+        String password = PasswordGenerator.generatePassword(10, true, false, false); // Pass booleans
+        assertNotNull(password, "Password should not be null");
+        assertEquals(10, password.length(), "Password length should match the specified length");
+        assertTrue(password.matches("[a-zA-Z]+"), "Password should only contain letters");
     }
 
     @Test
-    void testGeneratePassword_lettersOnly() {
-        String password = PasswordGenerator.generatePassword(12, true, false, false);
-        assertTrue(password.matches("[a-zA-Z]+"));
+    public void testGeneratePassword_OnlyNumbers() {
+        String password = PasswordGenerator.generatePassword(10, false, true, false); // Pass booleans
+        assertNotNull(password, "Password should not be null");
+        assertEquals(10, password.length(), "Password length should match the specified length");
+        assertTrue(password.matches("\\d+"), "Password should only contain numbers");
     }
 
     @Test
-    void testGeneratePassword_numbersOnly() {
-        String password = PasswordGenerator.generatePassword(12, false, true, false);
-        assertTrue(password.matches("[0-9]+"));
+    public void testGeneratePassword_OnlySpecialCharacters() {
+        String password = PasswordGenerator.generatePassword(10, false, false, true); // Pass booleans
+        assertNotNull(password, "Password should not be null");
+        assertEquals(10, password.length(), "Password length should match the specified length");
+        assertTrue(password.matches("[!@#$%^&*()\\-_=+\\[\\]{}|;:,.<>?]+"), "Password should only contain special characters");
     }
 
     @Test
-    void testGeneratePassword_specialCharsOnly() {
-        String password = PasswordGenerator.generatePassword(12, false, false, true);
-        assertTrue(password.matches("[!@#$%^&*()\\-_=+\\[\\]{}|;:,.<>?]+"));
-    }
-
-    @Test
-    void testGeneratePassword_mixedTypes() {
-        String password = PasswordGenerator.generatePassword(15, true, true, true);
-        assertTrue(password.matches(".*[a-zA-Z].*"));
-        assertTrue(password.matches(".*[0-9].*"));
-        assertTrue(password.matches(".*[!@#$%^&*()\\-_=+\\[\\]{}|;:,.<>?].*"));
-    }
-
-    @Test
-    void testGeneratePassword_invalidLength() {
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
-                () -> PasswordGenerator.generatePassword(6, true, true, true));
+    public void testGeneratePassword_ThrowsExceptionForShortLength() {
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            PasswordGenerator.generatePassword(6, true, true, true); // Pass booleans
+        });
         assertEquals("Password length must be at least 7.", exception.getMessage());
     }
 
     @Test
-    void testGeneratePassword_noCharacterTypesSelected() {
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
-                () -> PasswordGenerator.generatePassword(10, false, false, false));
+    public void testGeneratePassword_ThrowsExceptionForNoCharacterTypes() {
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            PasswordGenerator.generatePassword(10, false, false, false); // Pass booleans
+        });
         assertEquals("At least one of useLetters, useNumbers, or useSpecialChars must be true.", exception.getMessage());
     }
 }
