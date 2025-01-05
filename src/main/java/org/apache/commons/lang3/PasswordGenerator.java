@@ -19,12 +19,16 @@
 
 package org.apache.commons.lang3;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/**
+ * Utility class for generating and validating passwords.
+ */
 public class PasswordGenerator {
 
     private static final Logger logger = LoggerFactory.getLogger(PasswordGenerator.class);
@@ -35,9 +39,9 @@ public class PasswordGenerator {
     /**
      * Generates a random password with guaranteed inclusion of requested character types.
      *
-     * @param length         the length of the password (must be at least 7)
-     * @param useLetters     whether to include letters
-     * @param useNumbers     whether to include numbers
+     * @param length          the length of the password (must be at least 7)
+     * @param useLetters      whether to include letters
+     * @param useNumbers      whether to include numbers
      * @param useSpecialChars whether to include special characters
      * @return the generated password
      */
@@ -90,5 +94,90 @@ public class PasswordGenerator {
             characters[index] = temp;
         }
         return new String(characters);
+    }
+
+    /**
+     * Validates the provided password against the generation criteria.
+     *
+     * @param password        the password to validate
+     * @param useLetters      whether letters are required
+     * @param useNumbers      whether numbers are required
+     * @param useSpecialChars whether special characters are required
+     * @return "yes" if the password is valid, "no" otherwise
+     */
+    public static String validatePassword(String password, boolean useLetters, boolean useNumbers, boolean useSpecialChars) {
+        if (password == null || password.isEmpty()) {
+            return "no";
+        }
+
+        boolean hasLetter = password.matches(".*[a-zA-Z].*");
+        boolean hasNumber = password.matches(".*\\d.*");
+        boolean hasSpecialChar = password.matches(".*[!@#$%^&*()\\-_=+\\[\\]{}|;:,.<>?].*");
+
+        if (useLetters && !hasLetter) {
+            return "no";
+        }
+        if (useNumbers && !hasNumber) {
+            return "no";
+        }
+        if (useSpecialChars && !hasSpecialChar) {
+            return "no";
+        }
+
+        return "yes";
+    }
+
+    /**
+     * Prompts the user for a "yes" or "no" response and validates the input.
+     *
+     * @param scanner the Scanner object for user input
+     * @param prompt  the prompt message to display
+     * @return the validated "yes" or "no" response
+     */
+    public static String getYesNoInput(Scanner scanner, String prompt) {
+        String input;
+        while (true) {
+            logger.info(prompt);
+            input = scanner.nextLine().trim();
+            if ("yes".equalsIgnoreCase(input) || "no".equalsIgnoreCase(input)) {
+                return input.toLowerCase();
+            } else {
+                logger.warn("Invalid input. Please enter 'yes' or 'no'.");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in, "UTF-8")) {
+            int length = 0;
+            while (length < 7) {
+                logger.info("Enter password length (minimum 7): ");
+                try {
+                    length = scanner.nextInt();
+                    if (length < 7) {
+                        logger.warn("Password length must be at least 7. Please try again.");
+                    }
+                } catch (InputMismatchException e) {
+                    logger.error("Invalid input. Please enter a valid number.");
+                    scanner.next(); // Consume invalid input
+                }
+            }
+            scanner.nextLine(); // Consume the newline
+
+            String useLetters = getYesNoInput(scanner, "Use letters? (yes/no): ");
+            String useNumbers = getYesNoInput(scanner, "Use numbers? (yes/no): ");
+            String useSpecialChars = getYesNoInput(scanner, "Use special characters? (yes/no): ");
+
+            try {
+                String password = generatePassword(length, "yes".equalsIgnoreCase(useLetters), "yes".equalsIgnoreCase(useNumbers), "yes".equalsIgnoreCase(useSpecialChars));
+                logger.info("Generated Password: {}", password);
+                String validationResult = validatePassword(password, "yes".equalsIgnoreCase(useLetters), "yes".equalsIgnoreCase(useNumbers), "yes".equalsIgnoreCase(useSpecialChars));
+                logger.info("Password Validation Result: {}", validationResult);
+            } catch (IllegalArgumentException e) {
+                logger.error("Error: {}", e.getMessage());
+            }
+        } catch (Exception e) {
+            logger.error("Unexpected error occurred: {}", e.getMessage());
+        }
     }
 }
