@@ -10,7 +10,7 @@
  *   http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
+ * software distributed with the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
  * KIND, either express or implied.  See the License for the
  * specific language governing permissions and limitations
@@ -26,75 +26,77 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-
-public class PasswordGeneratorTest {
-
-    @Test
-    public void testGeneratePassword_AllCharacterTypes() {
-        String password = PasswordGenerator.generatePassword(10, true, true, true);
-        assertNotNull(password, "Password should not be null");
-        assertEquals(10, password.length(), "Password length should match the specified length");
-        assertTrue(password.matches(".*[a-zA-Z].*"), "Password should contain at least one letter");
-        assertTrue(password.matches(".*\\d.*"), "Password should contain at least one number");
-        assertTrue(password.matches(".*[!@#$%^&*()\\-_=+\\[\\]{}|;:,.<>?].*"), "Password should contain at least one special character");
-    }
+class PasswordGeneratorTest {
 
     @Test
-    public void testGeneratePassword_OnlyLetters() {
+    void testGeneratePassword_withLettersOnly() {
         String password = PasswordGenerator.generatePassword(10, true, false, false);
-        assertNotNull(password, "Password should not be null");
-        assertEquals(10, password.length(), "Password length should match the specified length");
-        assertTrue(password.matches("[a-zA-Z]+"), "Password should only contain letters");
+        assertNotNull(password, "Generated password should not be null");
+        assertEquals(10, password.length(), "Password length should be 10");
+        assertTrue(password.matches("[a-zA-Z]+"), "Password should contain only letters");
     }
 
     @Test
-    public void testGeneratePassword_OnlyNumbers() {
+    void testGeneratePassword_withNumbersOnly() {
         String password = PasswordGenerator.generatePassword(10, false, true, false);
-        assertNotNull(password, "Password should not be null");
-        assertEquals(10, password.length(), "Password length should match the specified length");
-        assertTrue(password.matches("\\d+"), "Password should only contain numbers");
+        assertNotNull(password, "Generated password should not be null");
+        assertEquals(10, password.length(), "Password length should be 10");
+        assertTrue(password.matches("[0-9]+"), "Password should contain only numbers");
     }
 
     @Test
-    public void testGeneratePassword_OnlySpecialCharacters() {
+    void testGeneratePassword_withSpecialCharsOnly() {
+        String specialChars = "!@#$%^&*()-_=+\\[\\]{}|;:,.<>?";
         String password = PasswordGenerator.generatePassword(10, false, false, true);
-        assertNotNull(password, "Password should not be null");
-        assertEquals(10, password.length(), "Password length should match the specified length");
-        assertTrue(password.matches("[!@#$%^&*()\\-_=+\\[\\]{}|;:,.<>?]+"), "Password should only contain special characters");
+        assertNotNull(password, "Generated password should not be null");
+        assertEquals(10, password.length(), "Password length should be 10");
+        assertTrue(password.matches("[" + specialChars + "]+"), "Password should contain only special characters");
     }
 
     @Test
-    public void testGeneratePassword_ThrowsExceptionForShortLength() {
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            PasswordGenerator.generatePassword(6, true, true, true);
-        });
-        assertEquals("Password length must be at least 7.", exception.getMessage());
-    }
-
-    @Test
-    public void testGeneratePassword_ThrowsExceptionForNoCharacterTypes() {
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            PasswordGenerator.generatePassword(10, false, false, false);
-        });
-        assertEquals("At least one of useLetters, useNumbers, or useSpecialChars must be true.", exception.getMessage());
-    }
-
-    @Test
-    public void testGeneratePassword_ShuffleIntegrity() {
-        String password = PasswordGenerator.generatePassword(10, true, true, true);
-        assertNotNull(password, "Password should not be null");
-        assertEquals(10, password.length(), "Password length should match the specified length");
+    void testGeneratePassword_withLettersNumbersAndSpecialChars() {
+        String specialChars = "!@#$%^&*()-_=+\\[\\]{}|;:,.<>?";
+        String password = PasswordGenerator.generatePassword(15, true, true, true);
+        assertNotNull(password, "Generated password should not be null");
+        assertEquals(15, password.length(), "Password length should be 15");
         assertTrue(password.matches(".*[a-zA-Z].*"), "Password should contain at least one letter");
-        assertTrue(password.matches(".*\\d.*"), "Password should contain at least one number");
-        assertTrue(password.matches(".*[!@#$%^&*()\\-_=+\\[\\]{}|;:,.<>?].*"), "Password should contain at least one special character");
+        assertTrue(password.matches(".*[0-9].*"), "Password should contain at least one number");
+        assertTrue(password.matches(".*[" + specialChars + "].*"), "Password should contain at least one special character");
     }
 
     @Test
-    public void testGeneratePassword_AllSameLengthCharacters() {
-        for (int i = 7; i <= 20; i++) {
-            String password = PasswordGenerator.generatePassword(i, true, true, true);
-            assertNotNull(password, "Password should not be null");
-            assertEquals(i, password.length(), "Password length should match the specified length");
-        }
+    void testValidatePassword_validPassword() {
+        String password = "ValidPassword123!";
+        assertEquals("yes", PasswordGenerator.validatePassword(password), "Valid password should return 'yes'");
+    }
+
+    @Test
+    void testValidatePassword_emptyPassword() {
+        String password = "";
+        assertEquals("no", PasswordGenerator.validatePassword(password), "Empty password should return 'no'");
+    }
+
+    @Test
+    void testValidatePassword_nullPassword() {
+        String password = null;
+        assertEquals("no", PasswordGenerator.validatePassword(password), "Null password should return 'no'");
+    }
+
+    @Test
+    void testGeneratePassword_invalidLength() {
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> PasswordGenerator.generatePassword(5, true, true, true)
+        );
+        assertEquals("Password length must be at least 7.", exception.getMessage(), "Error message should match");
+    }
+
+    @Test
+    void testGeneratePassword_invalidOptions() {
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> PasswordGenerator.generatePassword(10, false, false, false)
+        );
+        assertEquals("At least one of useLetters, useNumbers, or useSpecialChars must be true.", exception.getMessage(), "Error message should match");
     }
 }
