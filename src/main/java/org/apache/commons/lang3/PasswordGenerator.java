@@ -144,7 +144,7 @@ public class PasswordGenerator {
      * @param args command-line arguments
      */
     public static void main(String[] args) {
-        try (Scanner scanner = new Scanner(System.in)) {
+        try (Scanner scanner = new Scanner(System.in, "UTF-8")) {
             logger.info("Welcome to the Password Generator!");
 
             int length = 0;
