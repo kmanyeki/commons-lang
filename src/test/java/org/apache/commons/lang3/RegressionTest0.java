@@ -1,22 +1,3 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements. See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership. The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License. You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -111,7 +92,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test009");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 10, true, false, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "gSjIZjlixA" + "'", str4, "gSjIZjlixA");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "eMyPhXjgGK" + "'", str4, "eMyPhXjgGK");
     }
 
     @Test
@@ -119,14 +100,14 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test010");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 10, true, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "}*ZbNO81xQ" + "'", str4, "}*ZbNO81xQ");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "zWQ:mG6^tr" + "'", str4, "zWQ:mG6^tr");
     }
 
     @Test
     public void test011() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test011");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("}*ZbNO81xQ");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("zWQ:mG6^tr");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -206,7 +187,7 @@ public class RegressionTest0 {
     public void test018() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test018");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("gSjIZjlixA");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("eMyPhXjgGK");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -215,7 +196,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test019");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(10, true, false, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "voopnHROUd" + "'", str4, "voopnHROUd");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "fRLUygjBEJ" + "'", str4, "fRLUygjBEJ");
     }
 
     @Test
@@ -223,6 +204,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test020");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 10, false, true, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "*%?:7.,$.," + "'", str4, "*%?:7.,$.,");
     }
 
     @Test
@@ -230,7 +212,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test021");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) 'a', false, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "5734805896788488398589412866751387446985637466274759202301828508503158673586598617298731036972230" + "'", str4, "5734805896788488398589412866751387446985637466274759202301828508503158673586598617298731036972230");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "3316250492757615980603669005327482887872311157797619478349368572529965184471261872960430468149290" + "'", str4, "3316250492757615980603669005327482887872311157797619478349368572529965184471261872960430468149290");
     }
 
     @Test
@@ -260,52 +242,37 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test024");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '#', true, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "^.B<k4q%2Scp$B]mCyjj%AX29wdk5lct+)." + "'", str4, "^.B<k4q%2Scp$B]mCyjj%AX29wdk5lct+).");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LN(tAax.O)-*8yG*>6yaH$nZQFjn=MxFj[4" + "'", str4, "LN(tAax.O)-*8yG*>6yaH$nZQFjn=MxFj[4");
     }
 
     @Test
     public void test025() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test025");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("^.B<k4q%2Scp$B]mCyjj%AX29wdk5lct+).");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, true, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "@K|QDw+^}txRPm?t[|p%dNrg[lO:aa|wW^Wjf++ce_x]F+d%Qni%^e}ivIDCN!v}Fl=EDRd[jHPK#cepp?nCIlqD%YG*@S?S;AfX" + "'", str4, "@K|QDw+^}txRPm?t[|p%dNrg[lO:aa|wW^Wjf++ce_x]F+d%Qni%^e}ivIDCN!v}Fl=EDRd[jHPK#cepp?nCIlqD%YG*@S?S;AfX");
     }
 
     @Test
     public void test026() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test026");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, true, false, true);
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', true, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "rEIUy5gD4R8maZBMryDRHdySAh5bpdTVNlAOrCrVf2AJH1E4QPZv" + "'", str4, "rEIUy5gD4R8maZBMryDRHdySAh5bpdTVNlAOrCrVf2AJH1E4QPZv");
     }
 
     @Test
     public void test027() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test027");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("voopnHROUd");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '#', true, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "XdN7h9ad7YFS5aFy7O4q0liQsV3MzuOhX7m" + "'", str4, "XdN7h9ad7YFS5aFy7O4q0liQsV3MzuOhX7m");
     }
 
     @Test
     public void test028() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test028");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', true, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "Fjd3FJJTBDdNT1nqAIk8TL3hO1aWspq7E2QOGztt1W4z8IcX84Gr" + "'", str4, "Fjd3FJJTBDdNT1nqAIk8TL3hO1aWspq7E2QOGztt1W4z8IcX84Gr");
-    }
-
-    @Test
-    public void test029() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test029");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '#', true, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "MGJ7sJkGz8VRgVNufBiwZm4Xq6skGw9KBJI" + "'", str4, "MGJ7sJkGz8VRgVNufBiwZm4Xq6skGw9KBJI");
-    }
-
-    @Test
-    public void test030() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test030");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(1, false, true, true);
@@ -316,25 +283,25 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test029() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test029");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', false, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "6651604934180578318234867457392917330086567649745718" + "'", str4, "6651604934180578318234867457392917330086567649745718");
+    }
+
+    @Test
+    public void test030() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test030");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', false, true, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "*]1!:#3[3=;>79$:}4816:];5??5|1:%" + "'", str4, "*]1!:#3[3=;>79$:}4816:];5??5|1:%");
+    }
+
+    @Test
     public void test031() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test031");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', false, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "7161560304531673003051680159797824478059420705635989" + "'", str4, "7161560304531673003051680159797824478059420705635989");
-    }
-
-    @Test
-    public void test032() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test032");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', false, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "269?%[0^:,,<>31877[@?35>;1__7#{(" + "'", str4, "269?%[0^:,,<>31877[@?35>;1__7#{(");
-    }
-
-    @Test
-    public void test033() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test033");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) -1, false, false, false);
@@ -345,49 +312,57 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test032() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test032");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, false, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "2678651478607819046093425035051254011858799847435783002405117295751598555618550988256357559409461375" + "'", str4, "2678651478607819046093425035051254011858799847435783002405117295751598555618550988256357559409461375");
+    }
+
+    @Test
+    public void test033() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test033");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("*]1!:#3[3=;>79$:}4816:];5??5|1:%");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
     public void test034() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test034");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, false, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "5156872517592390915514971598147460026392806427182054703305584491504300137689014227038012580424778639" + "'", str4, "5156872517592390915514971598147460026392806427182054703305584491504300137689014227038012580424778639");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 100, true, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "7DEXLujxqpwNsxMG3xfJLLXreA1CgGdRjJj2n9VpiOQLdoU1iBrcC7KwyMvh22wmtYYM66gLWbD6DcxqgdlVuvvfqdj9Mi50r167" + "'", str4, "7DEXLujxqpwNsxMG3xfJLLXreA1CgGdRjJj2n9VpiOQLdoU1iBrcC7KwyMvh22wmtYYM66gLWbD6DcxqgdlVuvvfqdj9Mi50r167");
     }
 
     @Test
     public void test035() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test035");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("5734805896788488398589412866751387446985637466274759202301828508503158673586598617298731036972230");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 100, false, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "8582856702393400628171036535251852545074447486496976681232049101940013824876211891942114601511273293" + "'", str4, "8582856702393400628171036535251852545074447486496976681232049101940013824876211891942114601511273293");
     }
 
     @Test
     public void test036() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test036");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 100, true, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "wlwsSkIahdZgbcCkx28houBiS60hTOaz3G1MuqSFiTAhRziS9vVi2wid66R7moPE6l1G4ineyQB3YuREcoNYCVq8UUTi9phKtenn" + "'", str4, "wlwsSkIahdZgbcCkx28houBiS60hTOaz3G1MuqSFiTAhRziS9vVi2wid66R7moPE6l1G4ineyQB3YuREcoNYCVq8UUTi9phKtenn");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 10, true, true, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "2>8Yq)vc[w" + "'", str4, "2>8Yq)vc[w");
     }
 
     @Test
     public void test037() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test037");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 100, false, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "1508296663119492620444337975543099629920648171236130682550873398602246686021869831539201077732152651" + "'", str4, "1508296663119492620444337975543099629920648171236130682550873398602246686021869831539201077732152651");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("rEIUy5gD4R8maZBMryDRHdySAh5bpdTVNlAOrCrVf2AJH1E4QPZv");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test038() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test038");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 10, true, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "-$23wc]QjN" + "'", str4, "-$23wc]QjN");
-    }
-
-    @Test
-    public void test039() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test039");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 100, false, false, false);
@@ -398,9 +373,25 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test039() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test039");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("2678651478607819046093425035051254011858799847435783002405117295751598555618550988256357559409461375");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
     public void test040() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test040");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("*%?:7.,$.,");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
+    public void test041() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test041");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) -1, true, true, false);
@@ -411,33 +402,33 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test041() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test041");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("MGJ7sJkGz8VRgVNufBiwZm4Xq6skGw9KBJI");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
     public void test042() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test042");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 10, false, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "&*<+@${_&+" + "'", str4, "&*<+@${_&+");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("XdN7h9ad7YFS5aFy7O4q0liQsV3MzuOhX7m");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test043() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test043");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("&*<+@${_&+");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 10, false, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + ".[>($^%-^)" + "'", str4, ".[>($^%-^)");
     }
 
     @Test
     public void test044() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test044");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword(".[>($^%-^)");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
+    public void test045() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test045");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(0, true, true, false);
@@ -448,19 +439,10 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test045() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test045");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', true, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "N34n]}RNUoY.P#O;,ua:f1Fs#n2E2JI)Ge0>xbX9BQz6l9&q*F;J" + "'", str4, "N34n]}RNUoY.P#O;,ua:f1Fs#n2E2JI)Ge0>xbX9BQz6l9&q*F;J");
-    }
-
-    @Test
     public void test046() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test046");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("269?%[0^:,,<>31877[@?35>;1__7#{(");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', true, true, true);
     }
 
     @Test
@@ -480,7 +462,7 @@ public class RegressionTest0 {
     public void test048() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test048");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("-$23wc]QjN");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("fRLUygjBEJ");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -501,14 +483,6 @@ public class RegressionTest0 {
     public void test050() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test050");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("5156872517592390915514971598147460026392806427182054703305584491504300137689014227038012580424778639");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test051() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test051");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) -1, false, true, false);
@@ -519,11 +493,19 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test051() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test051");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("7DEXLujxqpwNsxMG3xfJLLXreA1CgGdRjJj2n9VpiOQLdoU1iBrcC7KwyMvh22wmtYYM66gLWbD6DcxqgdlVuvvfqdj9Mi50r167");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
     public void test052() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test052");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) 'a', true, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "f?&kk{v+|%&hc*DLrgoGqf|h]k:Ff(QF{l{[ZvWdH*^Ua!=}](VNWpo^Vdk[T=^GaYia*F#x|u-{@pPIp$ISNb]}PuvyB^+v&" + "'", str4, "f?&kk{v+|%&hc*DLrgoGqf|h]k:Ff(QF{l{[ZvWdH*^Ua!=}](VNWpo^Vdk[T=^GaYia*F#x|u-{@pPIp$ISNb]}PuvyB^+v&");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "HagQcjiY>bu,d+cPvqD*_#yVgqLua[@Booy=^zC&gOTFsAq!wI}!,)|lI]X(F:x$Hhb!s@&Ki{?<O)HL-Gp]Hs+KPls+|DpOF" + "'", str4, "HagQcjiY>bu,d+cPvqD*_#yVgqLua[@Booy=^zC&gOTFsAq!wI}!,)|lI]X(F:x$Hhb!s@&Ki{?<O)HL-Gp]Hs+KPls+|DpOF");
     }
 
     @Test
@@ -544,7 +526,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test054");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '#', false, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "84201882139620079492325091726446787" + "'", str4, "84201882139620079492325091726446787");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "66236159400524995328190173275161570" + "'", str4, "66236159400524995328190173275161570");
     }
 
     @Test
@@ -565,13 +547,21 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test056");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', true, false, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "GhROsYgLlsJqxsxtBrujhhUBaxoHOEmEeTNNuwqZZKGavAhaEisP" + "'", str4, "GhROsYgLlsJqxsxtBrujhhUBaxoHOEmEeTNNuwqZZKGavAhaEisP");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "sggUtXwlnbdRQLKALjgKAseIxwxvXNHXQwCXVnQfaDDoIKNKkNQF" + "'", str4, "sggUtXwlnbdRQLKALjgKAseIxwxvXNHXQwCXVnQfaDDoIKNKkNQF");
     }
 
     @Test
     public void test057() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test057");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("6651604934180578318234867457392917330086567649745718");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
+    public void test058() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test058");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 10, false, false, false);
@@ -582,66 +572,58 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test058() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test058");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("N34n]}RNUoY.P#O;,ua:f1Fs#n2E2JI)Ge0>xbX9BQz6l9&q*F;J");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
     public void test059() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test059");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 100, true, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "GCfDnG3WtNGlbzM3Nsr5hmyvAWx4OXsvf77TVMsQ3WUF4MG7xbba7oBCjoxqRdhEklablVDQRpbZF34wtR5wNzhatSVp8NVqxHq8" + "'", str4, "GCfDnG3WtNGlbzM3Nsr5hmyvAWx4OXsvf77TVMsQ3WUF4MG7xbba7oBCjoxqRdhEklablVDQRpbZF34wtR5wNzhatSVp8NVqxHq8");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "HzdjDZ3UY7QZkv8lT2bVz6XTzQykUJOVCapcglWx4rYjEUOYZVa0fPNpTTvSH3XePDRg4gBa06E4siB1cXeGg5bx14lWyNjFzOkd" + "'", str4, "HzdjDZ3UY7QZkv8lT2bVz6XTzQykUJOVCapcglWx4rYjEUOYZVa0fPNpTTvSH3XePDRg4gBa06E4siB1cXeGg5bx14lWyNjFzOkd");
     }
 
     @Test
     public void test060() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test060");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '#', true, false, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "DcHYRhaekVuawHjlHtzzcHFyTjJqxGnmsjO" + "'", str4, "DcHYRhaekVuawHjlHtzzcHFyTjJqxGnmsjO");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("2>8Yq)vc[w");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test061() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test061");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("GCfDnG3WtNGlbzM3Nsr5hmyvAWx4OXsvf77TVMsQ3WUF4MG7xbba7oBCjoxqRdhEklablVDQRpbZF34wtR5wNzhatSVp8NVqxHq8");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '#', true, false, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "GzXjKBvvzFBPInfTwWDelWatipUhhWyqoCx" + "'", str4, "GzXjKBvvzFBPInfTwWDelWatipUhhWyqoCx");
     }
 
     @Test
     public void test062() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test062");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, true, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "})|C(Z}cd_8ijj-*f%P(I{6Neyn!:!;tR2n5Et2t2$kOOy+!ypGWs!!9-_cTz>v<BDuF#7SwR^Vm&|vyhos;XF0Bh7]d18{A+tc4" + "'", str4, "})|C(Z}cd_8ijj-*f%P(I{6Neyn!:!;tR2n5Et2t2$kOOy+!ypGWs!!9-_cTz>v<BDuF#7SwR^Vm&|vyhos;XF0Bh7]d18{A+tc4");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("sggUtXwlnbdRQLKALjgKAseIxwxvXNHXQwCXVnQfaDDoIKNKkNQF");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test063() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test063");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, true, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "BfYQnn7rycu95xzubQm7vRjAWWYuNyTbCcudc5nGPWNxqPW2fSfa7N2nvfqYVrVyGFKewfUQhRYaoEktRLZWEquXcsMlEbWxYZb1" + "'", str4, "BfYQnn7rycu95xzubQm7vRjAWWYuNyTbCcudc5nGPWNxqPW2fSfa7N2nvfqYVrVyGFKewfUQhRYaoEktRLZWEquXcsMlEbWxYZb1");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, true, true, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "_SrV*bG1km*Ikz7eM4}SMb3>lbgXu%=kZF^;gz%Ia$|(#YMmS[|]|&CDz[4O-,h,n%kcl#+[w06vyGTEm>1|Zoo+FzLhwE)?_X*l" + "'", str4, "_SrV*bG1km*Ikz7eM4}SMb3>lbgXu%=kZF^;gz%Ia$|(#YMmS[|]|&CDz[4O-,h,n%kcl#+[w06vyGTEm>1|Zoo+FzLhwE)?_X*l");
     }
 
     @Test
     public void test064() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test064");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("84201882139620079492325091726446787");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, true, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "1aVhHCDaeZSHLHUDSeNF4SXPPfhZCZBI3hdvPOiAgQOF2xiNEU6vPrtnGQkUQuML8ZFWrWkDevCkENeUJMYPTd1cxxTusiD9csjK" + "'", str4, "1aVhHCDaeZSHLHUDSeNF4SXPPfhZCZBI3hdvPOiAgQOF2xiNEU6vPrtnGQkUQuML8ZFWrWkDevCkENeUJMYPTd1cxxTusiD9csjK");
     }
 
     @Test
     public void test065() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test065");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("1508296663119492620444337975543099629920648171236130682550873398602246686021869831539201077732152651");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("@K|QDw+^}txRPm?t[|p%dNrg[lO:aa|wW^Wjf++ce_x]F+d%Qni%^e}ivIDCN!v}Fl=EDRd[jHPK#cepp?nCIlqD%YG*@S?S;AfX");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -649,6 +631,14 @@ public class RegressionTest0 {
     public void test066() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test066");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("_SrV*bG1km*Ikz7eM4}SMb3>lbgXu%=kZF^;gz%Ia$|(#YMmS[|]|&CDz[4O-,h,n%kcl#+[w06vyGTEm>1|Zoo+FzLhwE)?_X*l");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
+    public void test067() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test067");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) -1, false, false, true);
@@ -659,17 +649,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test067() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test067");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', true, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "jy;*Y.>:8Bbs+_:oji)(hbh3-gL^^Q5x" + "'", str4, "jy;*Y.>:8Bbs+_:oji)(hbh3-gL^^Q5x");
-    }
-
-    @Test
     public void test068() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test068");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', true, true, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "U=dCO@.|)7YC,Nb](N:Dxs1$kdx0A]Gi" + "'", str4, "U=dCO@.|)7YC,Nb](N:Dxs1$kdx0A]Gi");
+    }
+
+    @Test
+    public void test069() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test069");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((-1), false, true, false);
@@ -677,14 +667,6 @@ public class RegressionTest0 {
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
         }
-    }
-
-    @Test
-    public void test069() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test069");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("BfYQnn7rycu95xzubQm7vRjAWWYuNyTbCcudc5nGPWNxqPW2fSfa7N2nvfqYVrVyGFKewfUQhRYaoEktRLZWEquXcsMlEbWxYZb1");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
@@ -704,14 +686,6 @@ public class RegressionTest0 {
     public void test071() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test071");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("DcHYRhaekVuawHjlHtzzcHFyTjJqxGnmsjO");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test072() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test072");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 1, true, true, false);
@@ -722,17 +696,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test073() throws Throwable {
+    public void test072() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test073");
+            System.out.format("%n%s%n", "RegressionTest0.test072");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 100, true, false, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "AXcaCoGciaLpwfdlsuwVgzQWlQlkYFdKZYuNvGEtDuBMkLdHWXgpBfsAlKDbwGHrHcizmcuzsXTQgUrSDLQMIRedYXvGRgbYdKTI" + "'", str4, "AXcaCoGciaLpwfdlsuwVgzQWlQlkYFdKZYuNvGEtDuBMkLdHWXgpBfsAlKDbwGHrHcizmcuzsXTQgUrSDLQMIRedYXvGRgbYdKTI");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "RctOamcggEqJiasVTRcBvWmozskqcbckNNXYAJWLeMMTweErmZqxohbfrZEPOsFkPEsRuRteFueKwiQympLKTPxCXyDkTtmmdOqF" + "'", str4, "RctOamcggEqJiasVTRcBvWmozskqcbckNNXYAJWLeMMTweErmZqxohbfrZEPOsFkPEsRuRteFueKwiQympLKTPxCXyDkTtmmdOqF");
     }
 
     @Test
-    public void test074() throws Throwable {
+    public void test073() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test074");
+            System.out.format("%n%s%n", "RegressionTest0.test073");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 0, false, true, true);
@@ -743,17 +717,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test075() throws Throwable {
+    public void test074() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test075");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("jy;*Y.>:8Bbs+_:oji)(hbh3-gL^^Q5x");
+            System.out.format("%n%s%n", "RegressionTest0.test074");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("LN(tAax.O)-*8yG*>6yaH$nZQFjn=MxFj[4");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
-    public void test076() throws Throwable {
+    public void test075() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test076");
+            System.out.format("%n%s%n", "RegressionTest0.test075");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 0, false, false, true);
@@ -764,17 +738,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test077() throws Throwable {
+    public void test076() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test077");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("7161560304531673003051680159797824478059420705635989");
+            System.out.format("%n%s%n", "RegressionTest0.test076");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("GzXjKBvvzFBPInfTwWDelWatipUhhWyqoCx");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
-    public void test078() throws Throwable {
+    public void test077() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test078");
+            System.out.format("%n%s%n", "RegressionTest0.test077");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 0, true, false, false);
@@ -785,31 +759,34 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test078() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test078");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) 'a', true, true, true);
+    }
+
+    @Test
     public void test079() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test079");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) 'a', true, true, true);
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("1aVhHCDaeZSHLHUDSeNF4SXPPfhZCZBI3hdvPOiAgQOF2xiNEU6vPrtnGQkUQuML8ZFWrWkDevCkENeUJMYPTd1cxxTusiD9csjK");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test080() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test080");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(10, true, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "876gCXglOe" + "'", str4, "876gCXglOe");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("HzdjDZ3UY7QZkv8lT2bVz6XTzQykUJOVCapcglWx4rYjEUOYZVa0fPNpTTvSH3XePDRg4gBa06E4siB1cXeGg5bx14lWyNjFzOkd");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test081() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test081");
-        // The following exception was thrown during execution in test generation
-        try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 0, true, false, true);
-            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
-        } catch (java.lang.IllegalArgumentException e) {
-            // Expected exception.
-        }
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(10, true, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "Sisp6H72Qc" + "'", str4, "Sisp6H72Qc");
     }
 
     @Test
@@ -818,7 +795,7 @@ public class RegressionTest0 {
             System.out.format("%n%s%n", "RegressionTest0.test082");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((-1), true, true, true);
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 0, true, false, true);
             org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
@@ -831,7 +808,7 @@ public class RegressionTest0 {
             System.out.format("%n%s%n", "RegressionTest0.test083");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) -1, true, false, false);
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((-1), true, true, true);
             org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
@@ -842,8 +819,13 @@ public class RegressionTest0 {
     public void test084() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test084");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("AXcaCoGciaLpwfdlsuwVgzQWlQlkYFdKZYuNvGEtDuBMkLdHWXgpBfsAlKDbwGHrHcizmcuzsXTQgUrSDLQMIRedYXvGRgbYdKTI");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) -1, true, false, false);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
     }
 
     @Test
@@ -877,13 +859,21 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test087");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) 'a', false, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + ";<+>-|,&<+$___{%);,,);?!,{,##)%_=<]%$}!}^{-=#$:}}}-(^$^?[{#&+%:.^$|$(<!<?=#!,{=(-)|%_+_]@->[,{[-|" + "'", str4, ";<+>-|,&<+$___{%);,,);?!,{,##)%_=<]%$}!}^{-=#$:}}}-(^$^?[{#&+%:.^$|$(<!<?=#!,{=(-)|%_+_]@->[,{[-|");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "^$@.,][,&#<]#%,<<^(;{{[#]$.>*_*[++$?_,|.?]}){?>^$=_%._<%.><+>*|+.<{+(,?#!#<&--(=}_,.[;<<-._@#<][*" + "'", str4, "^$@.,][,&#<]#%,<<^(;{{[#]$.>*_*[++$?_,|.?]}){?>^$=_%._<%.><+>*|+.<{+(,?#!#<&--(=}_,.[;<<-._@#<][*");
     }
 
     @Test
     public void test088() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test088");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("Sisp6H72Qc");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
+    public void test089() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test089");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 0, true, true, true);
@@ -894,33 +884,33 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test089() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test089");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', true, false, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "sRvKDtGItlPCiuchVHEPWebnIxRqmEPA" + "'", str4, "sRvKDtGItlPCiuchVHEPWebnIxRqmEPA");
-    }
-
-    @Test
     public void test090() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test090");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("Fjd3FJJTBDdNT1nqAIk8TL3hO1aWspq7E2QOGztt1W4z8IcX84Gr");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', true, false, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "ryYDhwznQTyZtirVViwdpSETIDLrNzMn" + "'", str4, "ryYDhwznQTyZtirVViwdpSETIDLrNzMn");
     }
 
     @Test
     public void test091() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test091");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 100, true, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + ")*=Ke|Pp[DzRc*T=<C|:i{ofKyeV|jo?nA+j[P._JoMD;RWFJ<}f@]xa=?QlQqtgDDEv-op:ua_S&y<:}}K.wTJ]}P]Zr[xrWcau" + "'", str4, ")*=Ke|Pp[DzRc*T=<C|:i{ofKyeV|jo?nA+j[P._JoMD;RWFJ<}f@]xa=?QlQqtgDDEv-op:ua_S&y<:}}K.wTJ]}P]Zr[xrWcau");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("8582856702393400628171036535251852545074447486496976681232049101940013824876211891942114601511273293");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test092() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test092");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 100, true, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "|q%JQD[omu%gzut<%Zv+#slXlY?PkiT!fQ|N$zR<]H^o+U|sSWYFTXIOUEPZ:n=(!WKHxk[H>qw}+L;VXZnx=LnhxrA=;nE!<wfV" + "'", str4, "|q%JQD[omu%gzut<%Zv+#slXlY?PkiT!fQ|N$zR<]H^o+U|sSWYFTXIOUEPZ:n=(!WKHxk[H>qw}+L;VXZnx=LnhxrA=;nE!<wfV");
+    }
+
+    @Test
+    public void test093() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test093");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((-1), true, false, true);
@@ -931,9 +921,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test093() throws Throwable {
+    public void test094() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test093");
+            System.out.format("%n%s%n", "RegressionTest0.test094");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 1, true, true, false);
@@ -944,47 +934,35 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test094() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test094");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, false, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "&@*}&:^{&{^*.{^-+-##]!*;}|^,{^=?>-$.(?,.!!|;;**=>}<^!<.[$:*{^%#;^&)(?=>!],=*{($+#:>}|#=:$)*@,==(+&$^" + "'", str4, "&@*}&:^{&{^*.{^-+-##]!*;}|^,{^=?>-$.(?,.!!|;;**=>}<^!<.[$:*{^%#;^&)(?=>!],=*{($+#:>}|#=:$)*@,==(+&$^");
-    }
-
-    @Test
     public void test095() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test095");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("})|C(Z}cd_8ijj-*f%P(I{6Neyn!:!;tR2n5Et2t2$kOOy+!ypGWs!!9-_cTz>v<BDuF#7SwR^Vm&|vyhos;XF0Bh7]d18{A+tc4");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, false, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "?|}[;]{{[+^!!<[,>,)(+<^:[}=}-}^#>{%.]};-,|};:,_+#=.>{{|}$^{]@%}&_+_*?!@}&.([%#!|%(.>&&#%{={:$-=*,}|<" + "'", str4, "?|}[;]{{[+^!!<[,>,)(+<^:[}=}-}^#>{%.]};-,|};:,_+#=.>{{|}$^{]@%}&_+_*?!@}&.([%#!|%(.>&&#%{={:$-=*,}|<");
     }
 
     @Test
     public void test096() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test096");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '#', true, false, true);
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("3316250492757615980603669005327482887872311157797619478349368572529965184471261872960430468149290");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test097() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test097");
-        // The following exception was thrown during execution in test generation
-        try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 1, false, false, false);
-            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
-        } catch (java.lang.IllegalArgumentException e) {
-            // Expected exception.
-        }
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("HagQcjiY>bu,d+cPvqD*_#yVgqLua[@Booy=^zC&gOTFsAq!wI}!,)|lI]X(F:x$Hhb!s@&Ki{?<O)HL-Gp]Hs+KPls+|DpOF");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test098() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test098");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("f?&kk{v+|%&hc*DLrgoGqf|h]k:Ff(QF{l{[ZvWdH*^Ua!=}](VNWpo^Vdk[T=^GaYia*F#x|u-{@pPIp$ISNb]}PuvyB^+v&");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '#', true, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "pfpX@L?gMas-g&EHz!-EnJ%C)p=m)g%H.W_" + "'", str4, "pfpX@L?gMas-g&EHz!-EnJ%C)p=m)g%H.W_");
     }
 
     @Test
@@ -993,8 +971,8 @@ public class RegressionTest0 {
             System.out.format("%n%s%n", "RegressionTest0.test099");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(10, false, false, false);
-            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: At least one of useLetters, useNumbers, or useSpecialChars must be true.");
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 1, false, false, false);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
         }
@@ -1006,8 +984,8 @@ public class RegressionTest0 {
             System.out.format("%n%s%n", "RegressionTest0.test100");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) -1, true, false, false);
-            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(10, false, false, false);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: At least one of useLetters, useNumbers, or useSpecialChars must be true.");
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
         }
@@ -1019,7 +997,7 @@ public class RegressionTest0 {
             System.out.format("%n%s%n", "RegressionTest0.test101");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) -1, false, false, false);
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) -1, true, false, false);
             org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
@@ -1030,14 +1008,35 @@ public class RegressionTest0 {
     public void test102() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test102");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 100, true, false, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "PzAToNqgXpeaaoavItzXWmhCcQdQWXTwXoKJjyeUnykIcXvXoQsLQWGSXfcAyxQhBiwrHutslsjjWPwszBqlmfiUrrsyiCKZVvqC" + "'", str4, "PzAToNqgXpeaaoavItzXWmhCcQdQWXTwXoKJjyeUnykIcXvXoQsLQWGSXfcAyxQhBiwrHutslsjjWPwszBqlmfiUrrsyiCKZVvqC");
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) -1, false, false, false);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
     }
 
     @Test
     public void test103() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test103");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 100, true, false, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "leNFmrfyCvRMTXPctLroRuNdCgeCtzfulEcqjIuwQHaZcYijwLUJcwKmDCSQESKnYcYvxOYcrEYLCoMBBAxNSkNrTppQADqsUDut" + "'", str4, "leNFmrfyCvRMTXPctLroRuNdCgeCtzfulEcqjIuwQHaZcYijwLUJcwKmDCSQESKnYcYvxOYcrEYLCoMBBAxNSkNrTppQADqsUDut");
+    }
+
+    @Test
+    public void test104() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test104");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("?|}[;]{{[+^!!<[,>,)(+<^:[}=}-}^#>{%.]};-,|};:,_+#=.>{{|}$^{]@%}&_+_*?!@}&.([%#!|%(.>&&#%{={:$-=*,}|<");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
+    public void test105() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test105");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 0, true, true, false);
@@ -1048,17 +1047,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test104() throws Throwable {
+    public void test106() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test104");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("GhROsYgLlsJqxsxtBrujhhUBaxoHOEmEeTNNuwqZZKGavAhaEisP");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test105() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test105");
+            System.out.format("%n%s%n", "RegressionTest0.test106");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 1, false, false, true);
@@ -1066,14 +1057,6 @@ public class RegressionTest0 {
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
         }
-    }
-
-    @Test
-    public void test106() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test106");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("wlwsSkIahdZgbcCkx28houBiS60hTOaz3G1MuqSFiTAhRziS9vVi2wid66R7moPE6l1G4ineyQB3YuREcoNYCVq8UUTi9phKtenn");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
@@ -1107,7 +1090,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test109");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 100, true, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "ciN@NGZ(gWd?[hLrKK?ab>ToO@TLC]tdw*BaX*a@%mE{_)^|>vXBg+u?walMZb;]moMiaMla^fyB&i][*|Wutl:Pbs!us%DqrPtZ" + "'", str4, "ciN@NGZ(gWd?[hLrKK?ab>ToO@TLC]tdw*BaX*a@%mE{_)^|>vXBg+u?walMZb;]moMiaMla^fyB&i][*|Wutl:Pbs!us%DqrPtZ");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "l&q>cKqlkC.^j?}PnF$o{>smTStFtB[z!pnwjD;^mK(W*{eY@.(LHsXv?ZrUkSAG!eFpRL)L=&%?{S.x*mjJnm{lch%,plBZkU^l" + "'", str4, "l&q>cKqlkC.^j?}PnF$o{>smTStFtB[z!pnwjD;^mK(W*{eY@.(LHsXv?ZrUkSAG!eFpRL)L=&%?{S.x*mjJnm{lch%,plBZkU^l");
     }
 
     @Test
@@ -1140,6 +1123,14 @@ public class RegressionTest0 {
     public void test112() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test112");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("66236159400524995328190173275161570");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
+    public void test113() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test113");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 0, false, false, false);
@@ -1147,14 +1138,6 @@ public class RegressionTest0 {
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
         }
-    }
-
-    @Test
-    public void test113() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test113");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword(")*=Ke|Pp[DzRc*T=<C|:i{ofKyeV|jo?nA+j[P._JoMD;RWFJ<}f@]xa=?QlQqtgDDEv-op:ua_S&y<:}}K.wTJ]}P]Zr[xrWcau");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
@@ -1188,7 +1171,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test116");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 10, true, false, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "fyAvqOHTgL" + "'", str4, "fyAvqOHTgL");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "tnnjcREXsp" + "'", str4, "tnnjcREXsp");
     }
 
     @Test
@@ -1196,7 +1179,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test117");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(10, true, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + ";9a{3k[dpJ" + "'", str4, ";9a{3k[dpJ");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "=Iyp4ip1G!" + "'", str4, "=Iyp4ip1G!");
     }
 
     @Test
@@ -1204,7 +1187,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test118");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 10, false, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "2282786931" + "'", str4, "2282786931");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "2948723518" + "'", str4, "2948723518");
     }
 
     @Test
@@ -1212,14 +1195,14 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test119");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(10, false, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + ":%<<554#3}" + "'", str4, ":%<<554#3}");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "27?]5$^{99" + "'", str4, "27?]5$^{99");
     }
 
     @Test
     public void test120() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test120");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("2282786931");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("ryYDhwznQTyZtirVViwdpSETIDLrNzMn");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -1227,14 +1210,6 @@ public class RegressionTest0 {
     public void test121() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test121");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword(":%<<554#3}");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test122() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test122");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 100, false, false, false);
@@ -1245,9 +1220,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test123() throws Throwable {
+    public void test122() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test123");
+            System.out.format("%n%s%n", "RegressionTest0.test122");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 1, true, false, true);
@@ -1255,6 +1230,14 @@ public class RegressionTest0 {
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
         }
+    }
+
+    @Test
+    public void test123() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test123");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("U=dCO@.|)7YC,Nb](N:Dxs1$kdx0A]Gi");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
@@ -1287,22 +1270,14 @@ public class RegressionTest0 {
     public void test126() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test126");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword(";9a{3k[dpJ");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 10, true, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "8Kq9TTgWxg" + "'", str4, "8Kq9TTgWxg");
     }
 
     @Test
     public void test127() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test127");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 10, true, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "z5mgq3t5C0" + "'", str4, "z5mgq3t5C0");
-    }
-
-    @Test
-    public void test128() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test128");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(1, false, true, false);
@@ -1313,9 +1288,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test129() throws Throwable {
+    public void test128() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test129");
+            System.out.format("%n%s%n", "RegressionTest0.test128");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(0, false, false, false);
@@ -1326,18 +1301,26 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test129() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test129");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("leNFmrfyCvRMTXPctLroRuNdCgeCtzfulEcqjIuwQHaZcYijwLUJcwKmDCSQESKnYcYvxOYcrEYLCoMBBAxNSkNrTppQADqsUDut");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
     public void test130() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test130");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 10, true, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "SE7TxfZlet" + "'", str4, "SE7TxfZlet");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "16KPjNU6Sv" + "'", str4, "16KPjNU6Sv");
     }
 
     @Test
     public void test131() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test131");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("ciN@NGZ(gWd?[hLrKK?ab>ToO@TLC]tdw*BaX*a@%mE{_)^|>vXBg+u?walMZb;]moMiaMla^fyB&i][*|Wutl:Pbs!us%DqrPtZ");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("RctOamcggEqJiasVTRcBvWmozskqcbckNNXYAJWLeMMTweErmZqxohbfrZEPOsFkPEsRuRteFueKwiQympLKTPxCXyDkTtmmdOqF");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -1359,21 +1342,13 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test133");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) 'a', true, false, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "FpIiwyavNFOJtsITWJjvckUxOkZdbwXJFIazpbOqvVzTVchplcAbuSfEXnnUMLchgqfMnENnkmMVkxAlijGxopFQPvqGvMAvb" + "'", str4, "FpIiwyavNFOJtsITWJjvckUxOkZdbwXJFIazpbOqvVzTVchplcAbuSfEXnnUMLchgqfMnENnkmMVkxAlijGxopFQPvqGvMAvb");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "kMVekselkLzdCbrsjPRtQqcNsDIHEdxBncbSkRwHfIcuoZtnyrplfcngoPGCFDQPjDuPQbCSrFhZEiFzidMjubzUuNFWszUqu" + "'", str4, "kMVekselkLzdCbrsjPRtQqcNsDIHEdxBncbSkRwHfIcuoZtnyrplfcngoPGCFDQPjDuPQbCSrFhZEiFzidMjubzUuNFWszUqu");
     }
 
     @Test
     public void test134() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test134");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("z5mgq3t5C0");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test135() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test135");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 1, false, false, true);
@@ -1384,17 +1359,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test136() throws Throwable {
+    public void test135() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test136");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("876gCXglOe");
+            System.out.format("%n%s%n", "RegressionTest0.test135");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("27?]5$^{99");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
-    public void test137() throws Throwable {
+    public void test136() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test137");
+            System.out.format("%n%s%n", "RegressionTest0.test136");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((-1), false, false, false);
@@ -1402,6 +1377,14 @@ public class RegressionTest0 {
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
         }
+    }
+
+    @Test
+    public void test137() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test137");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("tnnjcREXsp");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
@@ -1421,7 +1404,7 @@ public class RegressionTest0 {
     public void test139() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test139");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("fyAvqOHTgL");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("^$@.,][,&#<]#%,<<^(;{{[#]$.>*_*[++$?_,|.?]}){?>^$=_%._<%.><+>*|+.<{+(,?#!#<&--(=}_,.[;<<-._@#<][*");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -1429,14 +1412,22 @@ public class RegressionTest0 {
     public void test140() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test140");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 10, false, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "{$?}0=.713" + "'", str4, "{$?}0=.713");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("kMVekselkLzdCbrsjPRtQqcNsDIHEdxBncbSkRwHfIcuoZtnyrplfcngoPGCFDQPjDuPQbCSrFhZEiFzidMjubzUuNFWszUqu");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test141() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test141");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 10, false, true, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "?,]95>4^<6" + "'", str4, "?,]95>4^<6");
+    }
+
+    @Test
+    public void test142() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test142");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 1, true, false, false);
@@ -1447,18 +1438,10 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test142() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test142");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("FpIiwyavNFOJtsITWJjvckUxOkZdbwXJFIazpbOqvVzTVchplcAbuSfEXnnUMLchgqfMnENnkmMVkxAlijGxopFQPvqGvMAvb");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
     public void test143() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test143");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("&@*}&:^{&{^*.{^-+-##]!*;}|^,{^=?>-$.(?,.!!|;;**=>}<^!<.[$:*{^%#;^&)(?=>!],=*{($+#:>}|#=:$)*@,==(+&$^");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("?,]95>4^<6");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -1466,7 +1449,7 @@ public class RegressionTest0 {
     public void test144() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test144");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("sRvKDtGItlPCiuchVHEPWebnIxRqmEPA");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("l&q>cKqlkC.^j?}PnF$o{>smTStFtB[z!pnwjD;^mK(W*{eY@.(LHsXv?ZrUkSAG!eFpRL)L=&%?{S.x*mjJnm{lch%,plBZkU^l");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -1474,16 +1457,16 @@ public class RegressionTest0 {
     public void test145() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test145");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', false, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "^&<:%<$*>+!);>.&=]-&@:<)[[#@>{?:" + "'", str4, "^&<:%<$*>+!);>.&=]-&@:<)[[#@>{?:");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("16KPjNU6Sv");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test146() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test146");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("PzAToNqgXpeaaoavItzXWmhCcQdQWXTwXoKJjyeUnykIcXvXoQsLQWGSXfcAyxQhBiwrHutslsjjWPwszBqlmfiUrrsyiCKZVvqC");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', false, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "(-#{#{{#[=]{{{^.)=;*!!!&;$]|+.}#" + "'", str4, "(-#{#{{#[=]{{{^.)=;*!!!&;$]|+.}#");
     }
 
     @Test
@@ -1491,20 +1474,15 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test147");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', false, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "*}++]#[)[@(=;_}{[]%&&&#)>%(+[!)-,?(@,}%:({{-{;[}^*{!" + "'", str4, "*}++]#[)[@(=;_}{[]%&&&#)>%(+[!)-,?(@,}%:({{-{;[}^*{!");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "=)@$.)!||?@{|)+!|><%;;<!,+!*#-<?+||<=&:;)^$|[$-+?,_-" + "'", str4, "=)@$.)!||?@{|)+!|><%;;<!,+!*#-<?+||<=&:;)^$|[$-+?,_-");
     }
 
     @Test
     public void test148() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test148");
-        // The following exception was thrown during execution in test generation
-        try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) -1, true, false, true);
-            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
-        } catch (java.lang.IllegalArgumentException e) {
-            // Expected exception.
-        }
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("8Kq9TTgWxg");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
@@ -1513,7 +1491,7 @@ public class RegressionTest0 {
             System.out.format("%n%s%n", "RegressionTest0.test149");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 0, false, false, true);
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) -1, true, false, true);
             org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
@@ -1526,8 +1504,8 @@ public class RegressionTest0 {
             System.out.format("%n%s%n", "RegressionTest0.test150");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', false, false, false);
-            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: At least one of useLetters, useNumbers, or useSpecialChars must be true.");
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 0, false, false, true);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
         }
@@ -1537,38 +1515,74 @@ public class RegressionTest0 {
     public void test151() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test151");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', true, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "oq9u84COolrsc0Z3qLGgUVVr8J5Olahn" + "'", str4, "oq9u84COolrsc0Z3qLGgUVVr8J5Olahn");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("pfpX@L?gMas-g&EHz!-EnJ%C)p=m)g%H.W_");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test152() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test152");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) 'a', false, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "{>_|>133].$[-&1-&}{;{)688{&6(>%9(++1:0{0_44=8%?|%][0+16>++40000>{-.5{_=65>59)^7$)*.*3!@{.7?0@[*(+" + "'", str4, "{>_|>133].$[-&1-&}{;{)688{&6(>%9(++1:0{0_44=8%?|%][0+16>++40000>{-.5{_=65>59)^7$)*.*3!@{.7?0@[*(+");
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', false, false, false);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: At least one of useLetters, useNumbers, or useSpecialChars must be true.");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
     }
 
     @Test
     public void test153() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test153");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("^&<:%<$*>+!);>.&=]-&@:<)[[#@>{?:");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', true, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "Cpu1LxcxT5Fw4rzh5JalRl75S7S55Ap7" + "'", str4, "Cpu1LxcxT5Fw4rzh5JalRl75S7S55Ap7");
     }
 
     @Test
     public void test154() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test154");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(10, false, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "0521962810" + "'", str4, "0521962810");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("=)@$.)!||?@{|)+!|><%;;<!,+!*#-<?+||<=&:;)^$|[$-+?,_-");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test155() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test155");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) 'a', false, true, true);
+    }
+
+    @Test
+    public void test156() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test156");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("(-#{#{{#[=]{{{^.)=;*!!!&;$]|+.}#");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
+    public void test157() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test157");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(10, false, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "5532511647" + "'", str4, "5532511647");
+    }
+
+    @Test
+    public void test158() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test158");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("|q%JQD[omu%gzut<%Zv+#slXlY?PkiT!fQ|N$zR<]H^o+U|sSWYFTXIOUEPZ:n=(!WKHxk[H>qw}+L;VXZnx=LnhxrA=;nE!<wfV");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
+    public void test159() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test159");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 0, true, true, true);
@@ -1579,33 +1593,25 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test156() throws Throwable {
+    public void test160() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test156");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("SE7TxfZlet");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test157() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test157");
+            System.out.format("%n%s%n", "RegressionTest0.test160");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(10, false, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "]{^}$)}{^." + "'", str4, "]{^}$)}{^.");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "_!!%(@||&^" + "'", str4, "_!!%(@||&^");
     }
 
     @Test
-    public void test158() throws Throwable {
+    public void test161() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test158");
+            System.out.format("%n%s%n", "RegressionTest0.test161");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, false, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "2%8:4]<92%1^1]^69:4^.]?>&>1*!829&30:$8[#+}}49$7]+449(>>558@:3:5^+5|)0}4$%}?*0.<>!:[.?*_:%9$<7;.1)30+" + "'", str4, "2%8:4]<92%1^1]^69:4^.]?>&>1*!829&30:$8[#+}}49$7]+449(>>558@:3:5^+5|)0}4$%}?*0.<>!:[.?*_:%9$<7;.1)30+");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "({!<8:0=9&]<9}>^35{)8(^{(99$3|?]37!>2<-{*^05486+&_?9+4#]5]9&+(>[}3.<[9&.311__)-9.0&2*{*$>]{0>5#=6-[|" + "'", str4, "({!<8:0=9&]<9}>^35{)8(^{(99$3|?]37!>2<-{*^05486+&_?9+4#]5]9&+(>[}3.<[9&.311__)-9.0&2*{*$>]{0>5#=6-[|");
     }
 
     @Test
-    public void test159() throws Throwable {
+    public void test162() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test159");
+            System.out.format("%n%s%n", "RegressionTest0.test162");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 0, true, true, false);
@@ -1616,66 +1622,42 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test160() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test160");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("*}++]#[)[@(=;_}{[]%&&&#)>%(+[!)-,?(@,}%:({{-{;[}^*{!");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test161() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test161");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '#', false, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "?**|};}},%<.!{.|]]]%()*_*^*!!>-],^=" + "'", str4, "?**|};}},%<.!{.|]]]%()*_*^*!!>-],^=");
-    }
-
-    @Test
-    public void test162() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test162");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("2%8:4]<92%1^1]^69:4^.]?>&>1*!829&30:$8[#+}}49$7]+449(>>558@:3:5^+5|)0}4$%}?*0.<>!:[.?*_:%9$<7;.1)30+");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
     public void test163() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test163");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '#', false, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "(:+^9?9%{$@(]^9[#|&^%0]0-#*7)!+*60," + "'", str4, "(:+^9?9%{$@(]^9[#|&^%0]0-#*7)!+*60,");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '#', false, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "(!<,,!>.*+$:-!)%::#%}),^!!#}[[-<+_@" + "'", str4, "(!<,,!>.*+$:-!)%::#%}),^!!#}[[-<+_@");
     }
 
     @Test
     public void test164() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test164");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', true, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "*tgf[PEz)Y$vS)rBQwZ{a:vJVp@wP!dMH?+HIo;w>#C;y(zen$UH" + "'", str4, "*tgf[PEz)Y$vS)rBQwZ{a:vJVp@wP!dMH?+HIo;w>#C;y(zen$UH");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '#', false, true, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "(.3&3&!{_!0#(#=[0([@|_2*,_5{]22;]6;" + "'", str4, "(.3&3&!{_!0#(#=[0([@|_2*,_5{]22;]6;");
     }
 
     @Test
     public void test165() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test165");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("*tgf[PEz)Y$vS)rBQwZ{a:vJVp@wP!dMH?+HIo;w>#C;y(zen$UH");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', true, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "|cg^Hxi+oed,{|s>LtJ%*fSXr&<]sAndZfyOaZjih>bzOkM$Cy[I" + "'", str4, "|cg^Hxi+oed,{|s>LtJ%*fSXr&<]sAndZfyOaZjih>bzOkM$Cy[I");
     }
 
     @Test
     public void test166() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test166");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("{>_|>133].$[-&1-&}{;{)688{&6(>%9(++1:0{0_44=8%?|%][0+16>++40000>{-.5{_=65>59)^7$)*.*3!@{.7?0@[*(+");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 100, false, true, true);
     }
 
     @Test
     public void test167() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test167");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 100, false, true, true);
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("5532511647");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
@@ -1683,23 +1665,23 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test168");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 100, true, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "D(h,5qw8uX00g]hAR=:<nYi46Nni#:^@MA$<ou%%,Ais0k1|kXMUs:A^>M-rt#*z-n.S>E>DZj+Wc.L(&@O3X${35dFC03K}!FHH" + "'", str4, "D(h,5qw8uX00g]hAR=:<nYi46Nni#:^@MA$<ou%%,Ais0k1|kXMUs:A^>M-rt#*z-n.S>E>DZj+Wc.L(&@O3X${35dFC03K}!FHH");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "dCho+Qe8_2XJ<%96,+>!{Ylm8q2Zmj&|]9]%wXBotCb^H;;zv6b575ToNcav#{-AE9l%HOL{pxNm$0r{-3veqZz7Z5:LFQ&]0-V<" + "'", str4, "dCho+Qe8_2XJ<%96,+>!{Ylm8q2Zmj&|]9]%wXBotCb^H;;zv6b575ToNcav#{-AE9l%HOL{pxNm$0r{-3veqZz7Z5:LFQ&]0-V<");
     }
 
     @Test
     public void test169() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test169");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("(:+^9?9%{$@(]^9[#|&^%0]0-#*7)!+*60,");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 10, true, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "]laj($)v@l" + "'", str4, "]laj($)v@l");
     }
 
     @Test
     public void test170() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test170");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 10, true, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "|Xj.HabB_B" + "'", str4, "|Xj.HabB_B");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("=Iyp4ip1G!");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
@@ -1707,7 +1689,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test171");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 10, false, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "|-,<).>>)&" + "'", str4, "|-,<).>>)&");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "}):%^=|-_{" + "'", str4, "}):%^=|-_{");
     }
 
     @Test
@@ -1715,21 +1697,13 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test172");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) '4', false, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "5><!|)4),(:69}}|93^*17_:24&*%!1=%60%1=33}{-6]<81}=3@" + "'", str4, "5><!|)4),(:69}}|93^*17_:24&*%!1=%60%1=33}{-6]<81}=3@");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "-%5|&?031(>&7^2_$+%[|?(0}7%@>{<}*?(<%%=][1;=&-.=}6|5" + "'", str4, "-%5|&?031(>&7^2_$+%[|?(0}7%@>{<}*?(<%%=][1;=&-.=}6|5");
     }
 
     @Test
     public void test173() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test173");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("|-,<).>>)&");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test174() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test174");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((-1), false, false, true);
@@ -1740,9 +1714,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test175() throws Throwable {
+    public void test174() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test175");
+            System.out.format("%n%s%n", "RegressionTest0.test174");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((-1), false, true, true);
@@ -1753,10 +1727,18 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test175() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test175");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("|cg^Hxi+oed,{|s>LtJ%*fSXr&<]sAndZfyOaZjih>bzOkM$Cy[I");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
     public void test176() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test176");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("|Xj.HabB_B");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("({!<8:0=9&]<9}>^35{)8(^{(99$3|?]37!>2<-{*^05486+&_?9+4#]5]9&+(>[}3.<[9&.311__)-9.0&2*{*$>]{0>5#=6-[|");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -1778,14 +1760,14 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test178");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) 'a', true, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "4erv6xBTqKoIrv5IYazjBpJvfiZ3R2f8iNnsGEleMmTFsfgJle6Hvuf8RXM7fyOmC8KK4A5YnZYUv9lmnKtEZg5hiDp29q7dg" + "'", str4, "4erv6xBTqKoIrv5IYazjBpJvfiZ3R2f8iNnsGEleMmTFsfgJle6Hvuf8RXM7fyOmC8KK4A5YnZYUv9lmnKtEZg5hiDp29q7dg");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "P6eD56JuewU6jIvqdWwYSfB5eTb2bf9V80ANP52af42UcKrTwVDSwyYUUtUGLSf334t4QcwkyFoLrl6N1MljBudUm3Rq4U4Mn" + "'", str4, "P6eD56JuewU6jIvqdWwYSfB5eTb2bf9V80ANP52af42UcKrTwVDSwyYUUtUGLSf334t4QcwkyFoLrl6N1MljBudUm3Rq4U4Mn");
     }
 
     @Test
     public void test179() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test179");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("0521962810");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("-%5|&?031(>&7^2_$+%[|?(0}7%@>{<}*?(<%%=][1;=&-.=}6|5");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -1793,7 +1775,7 @@ public class RegressionTest0 {
     public void test180() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test180");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("oq9u84COolrsc0Z3qLGgUVVr8J5Olahn");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("_!!%(@||&^");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -1801,15 +1783,15 @@ public class RegressionTest0 {
     public void test181() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test181");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 10, true, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + ".*rBl_Agfd" + "'", str4, ".*rBl_Agfd");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("}):%^=|-_{");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test182() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test182");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("5><!|)4),(:69}}|93^*17_:24&*%!1=%60%1=33}{-6]<81}=3@");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("dCho+Qe8_2XJ<%96,+>!{Ylm8q2Zmj&|]9]%wXBotCb^H;;zv6b575ToNcav#{-AE9l%HOL{pxNm$0r{-3veqZz7Z5:LFQ&]0-V<");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -1817,6 +1799,22 @@ public class RegressionTest0 {
     public void test183() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test183");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 10, true, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "sYUiuZ_c_%" + "'", str4, "sYUiuZ_c_%");
+    }
+
+    @Test
+    public void test184() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test184");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("(.3&3&!{_!0#(#=[0([@|_2*,_5{]22;]6;");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
+    public void test185() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test185");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 10, false, false, false);
@@ -1827,26 +1825,10 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test184() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test184");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword(";<+>-|,&<+$___{%);,,);?!,{,##)%_=<]%$}!}^{-=#$:}}}-(^$^?[{#&+%:.^$|$(<!<?=#!,{=(-)|%_+_]@->[,{[-|");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test185() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test185");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("4erv6xBTqKoIrv5IYazjBpJvfiZ3R2f8iNnsGEleMmTFsfgJle6Hvuf8RXM7fyOmC8KK4A5YnZYUv9lmnKtEZg5hiDp29q7dg");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
     public void test186() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test186");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("{$?}0=.713");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("(!<,,!>.*+$:-!)%::#%}),^!!#}[[-<+_@");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -1854,7 +1836,7 @@ public class RegressionTest0 {
     public void test187() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test187");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword(".*rBl_Agfd");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("Cpu1LxcxT5Fw4rzh5JalRl75S7S55Ap7");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -1862,14 +1844,6 @@ public class RegressionTest0 {
     public void test188() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test188");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("D(h,5qw8uX00g]hAR=:<nYi46Nni#:^@MA$<ou%%,Ais0k1|kXMUs:A^>M-rt#*z-n.S>E>DZj+Wc.L(&@O3X${35dFC03K}!FHH");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test189() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test189");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(0, false, true, true);
@@ -1880,9 +1854,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test190() throws Throwable {
+    public void test189() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test190");
+            System.out.format("%n%s%n", "RegressionTest0.test189");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(1, true, true, true);
@@ -1890,6 +1864,14 @@ public class RegressionTest0 {
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
         }
+    }
+
+    @Test
+    public void test190() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test190");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("2948723518");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
@@ -1910,29 +1892,13 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test192");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 100, false, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "4562351691849389268631635788010077748700761938269069396969716348650545088036992399112308650291084929" + "'", str4, "4562351691849389268631635788010077748700761938269069396969716348650545088036992399112308650291084929");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "9114092274553474519624251228231653980350080334012109095941063726547849892417050499221552749354006304" + "'", str4, "9114092274553474519624251228231653980350080334012109095941063726547849892417050499221552749354006304");
     }
 
     @Test
     public void test193() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test193");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("]{^}$)}{^.");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test194() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test194");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("4562351691849389268631635788010077748700761938269069396969716348650545088036992399112308650291084929");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test195() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test195");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(1, true, true, false);
@@ -1943,25 +1909,25 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test194() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test194");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, true, false, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "RerpfFhKnwrMmlsqkERrTupCqNlKjaYHwThYMaeoyvuNjmiJvQqUxJEcaVpHIqMlFeozhnYkiIxxNEKqtSPXTAxDyOYkboxznymh" + "'", str4, "RerpfFhKnwrMmlsqkERrTupCqNlKjaYHwThYMaeoyvuNjmiJvQqUxJEcaVpHIqMlFeozhnYkiIxxNEKqtSPXTAxDyOYkboxznymh");
+    }
+
+    @Test
+    public void test195() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test195");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', true, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "N?>=?Ye{gjXyn^z:ZV+x(QBS|X=r%r^o" + "'", str4, "N?>=?Ye{gjXyn^z:ZV+x(QBS|X=r%r^o");
+    }
+
+    @Test
     public void test196() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test196");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(100, true, false, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "NDBuaieWBilecBhhaQmbEqbcvrzGRolGeyewnxDCdjxFoxVIjKByrBNIZcucpnHlXPEdAaoTdonysPPidJAlvEGyzjPffdLVJlOe" + "'", str4, "NDBuaieWBilecBhhaQmbEqbcvrzGRolGeyewnxDCdjxFoxVIjKByrBNIZcucpnHlXPEdAaoTdonysPPidJAlvEGyzjPffdLVJlOe");
-    }
-
-    @Test
-    public void test197() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test197");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', true, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "EZeh[iL|*HBAeY^WTA?:i@xX-xx$RBc%" + "'", str4, "EZeh[iL|*HBAeY^WTA?:i@xX-xx$RBc%");
-    }
-
-    @Test
-    public void test198() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test198");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 1, false, false, false);
@@ -1972,33 +1938,41 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test197() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test197");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("RerpfFhKnwrMmlsqkERrTupCqNlKjaYHwThYMaeoyvuNjmiJvQqUxJEcaVpHIqMlFeozhnYkiIxxNEKqtSPXTAxDyOYkboxznymh");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
+    public void test198() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test198");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 100, false, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "%!#&$>[>-{%&(@_$[];%)&.&@?+}^*%&{#(!+@@&<=>+_]::;@}-(}||<],?<^(:!,>[+||!%.[<{[#+-.:#);,*?%_&]-{!>#%^" + "'", str4, "%!#&$>[>-{%&(@_$[];%)&.&@?+}^*%&{#(!+@@&<=>+_]::;@}-(}||<],?<^(:!,>[+||!%.[<{[#+-.:#);,*?%_&]-{!>#%^");
+    }
+
+    @Test
     public void test199() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test199");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("NDBuaieWBilecBhhaQmbEqbcvrzGRolGeyewnxDCdjxFoxVIjKByrBNIZcucpnHlXPEdAaoTdonysPPidJAlvEGyzjPffdLVJlOe");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', false, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "67313557252825135894493695193395" + "'", str4, "67313557252825135894493695193395");
     }
 
     @Test
     public void test200() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test200");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 100, false, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "_<]|(+%?_+=<$;;]:;.}#%%[,(%{#);>+>#@;*[:%<=&^}-_){|<},+^|%&)*!<-!<%.(<+:#$,%?]-{*!$!+)?[^;(,-|%#:!)," + "'", str4, "_<]|(+%?_+=<$;;]:;.}#%%[,(%{#);>+>#@;*[:%<=&^}-_){|<},+^|%&)*!<-!<%.(<+:#$,%?]-{*!$!+)?[^;(,-|%#:!),");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("9114092274553474519624251228231653980350080334012109095941063726547849892417050499221552749354006304");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
     public void test201() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test201");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) ' ', false, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "76620445551624181234163364612176" + "'", str4, "76620445551624181234163364612176");
-    }
-
-    @Test
-    public void test202() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test202");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 1, true, true, true);
@@ -2009,10 +1983,18 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test202() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test202");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("N?>=?Ye{gjXyn^z:ZV+x(QBS|X=r%r^o");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
     public void test203() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test203");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("76620445551624181234163364612176");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("]laj($)v@l");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -2033,24 +2015,24 @@ public class RegressionTest0 {
     public void test205() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test205");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("_<]|(+%?_+=<$;;]:;.}#%%[,(%{#);>+>#@;*[:%<=&^}-_){|<},+^|%&)*!<-!<%.(<+:#$,%?]-{*!$!+)?[^;(,-|%#:!),");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 10, false, true, false);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "9286640838" + "'", str4, "9286640838");
     }
 
     @Test
     public void test206() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test206");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 10, false, true, false);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "6835818395" + "'", str4, "6835818395");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(10, true, false, true);
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "%s=%-bnRAQ" + "'", str4, "%s=%-bnRAQ");
     }
 
     @Test
     public void test207() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test207");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(10, true, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "<-iEn,tPTw" + "'", str4, "<-iEn,tPTw");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("%s=%-bnRAQ");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
@@ -2070,7 +2052,7 @@ public class RegressionTest0 {
     public void test209() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test209");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("?**|};}},%<.!{.|]]]%()*_*^*!!>-],^=");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("sYUiuZ_c_%");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -2091,7 +2073,7 @@ public class RegressionTest0 {
     public void test211() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test211");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("EZeh[iL|*HBAeY^WTA?:i@xX-xx$RBc%");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("P6eD56JuewU6jIvqdWwYSfB5eTb2bf9V80ANP52af42UcKrTwVDSwyYUUtUGLSf334t4QcwkyFoLrl6N1MljBudUm3Rq4U4Mn");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -2099,14 +2081,6 @@ public class RegressionTest0 {
     public void test212() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test212");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("<-iEn,tPTw");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
-    }
-
-    @Test
-    public void test213() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test213");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(0, false, false, true);
@@ -2117,10 +2091,18 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test213() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test213");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("%!#&$>[>-{%&(@_$[];%)&.&@?+}^*%&{#(!+@@&<=>+_]::;@}-(}||<],?<^(:!,>[+||!%.[<{[#+-.:#);,*?%_&]-{!>#%^");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+    }
+
+    @Test
     public void test214() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test214");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("6835818395");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("9286640838");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
@@ -2128,13 +2110,8 @@ public class RegressionTest0 {
     public void test215() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test215");
-        // The following exception was thrown during execution in test generation
-        try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(1, true, false, true);
-            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
-        } catch (java.lang.IllegalArgumentException e) {
-            // Expected exception.
-        }
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("67313557252825135894493695193395");
+        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 
     @Test
@@ -2143,7 +2120,7 @@ public class RegressionTest0 {
             System.out.format("%n%s%n", "RegressionTest0.test216");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 0, false, true, false);
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword(1, true, false, true);
             org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
@@ -2156,7 +2133,7 @@ public class RegressionTest0 {
             System.out.format("%n%s%n", "RegressionTest0.test217");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 1, true, false, true);
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 0, false, true, false);
             org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
@@ -2169,7 +2146,7 @@ public class RegressionTest0 {
             System.out.format("%n%s%n", "RegressionTest0.test218");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 1, true, false, false);
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 1, true, false, true);
             org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
         } catch (java.lang.IllegalArgumentException e) {
             // Expected exception.
@@ -2180,16 +2157,20 @@ public class RegressionTest0 {
     public void test219() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test219");
-        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 100, true, true, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "}o<@K,5P,YfNb0uO{Y)@EYDzx^#O-r5%^ZW?=arRER$ks:qfTis}+>j&cjO4=*y^n7|Q?Xe[2eQ.OJw-vT|e|4Vodk;Ho4>[l2#X" + "'", str4, "}o<@K,5P,YfNb0uO{Y)@EYDzx^#O-r5%^ZW?=arRER$ks:qfTis}+>j&cjO4=*y^n7|Q?Xe[2eQ.OJw-vT|e|4Vodk;Ho4>[l2#X");
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 1, true, false, false);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Password length must be at least 7.");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
     }
 
     @Test
     public void test220() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test220");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("}o<@K,5P,YfNb0uO{Y)@EYDzx^#O-r5%^ZW?=arRER$ks:qfTis}+>j&cjO4=*y^n7|Q?Xe[2eQ.OJw-vT|e|4Vodk;Ho4>[l2#X");
-        org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
+        java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (short) 100, true, true, true);
     }
 
     @Test
@@ -2197,14 +2178,14 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test221");
         java.lang.String str4 = org.apache.commons.lang3.PasswordGenerator.generatePassword((int) (byte) 100, false, false, true);
-// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "<:[..?!|[.;=$=^*)_{@)${+}#,)({{,+_(;<^??=#(?,;!$,&{[%!_&;&^^[<(^{*}{^?|@_+.&@<[,+*,>^.>.#|].-+<+#]|&" + "'", str4, "<:[..?!|[.;=$=^*)_{@)${+}#,)({{,+_(;<^??=#(?,;!$,&{[%!_&;&^^[<(^{*}{^?|@_+.&@<[,+*,>^.>.#|].-+<+#]|&");
+// flaky:         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "?:>^|^^;%}>.),(,()=@$)?>|)_+|(&>>+&??{]%=@:%=._>?})#(:).=]>(!;${($;,@}]-#::|<*+)_}=>%>^&-+-[#._^[{[:" + "'", str4, "?:>^|^^;%}>.),(,()=@$)?>|)_+|(&>>+&??{]%=@:%=._>?})#(:).=]>(!;${($;,@}]-#::|<*+)_}=>%>^&-+-[#._^[{[:");
     }
 
     @Test
     public void test222() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test222");
-        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("<:[..?!|[.;=$=^*)_{@)${+}#,)({{,+_(;<^??=#(?,;!$,&{[%!_&;&^^[<(^{*}{^?|@_+.&@<[,+*,>^.>.#|].-+<+#]|&");
+        java.lang.String str1 = org.apache.commons.lang3.PasswordGenerator.validatePassword("?:>^|^^;%}>.),(,()=@$)?>|)_+|(&>>+&??{]%=@:%=._>?})#(:).=]>(!;${($;,@}]-#::|<*+)_}=>%>^&-+-[#._^[{[:");
         org.junit.Assert.assertEquals("'" + str1 + "' != '" + "yes" + "'", str1, "yes");
     }
 }
