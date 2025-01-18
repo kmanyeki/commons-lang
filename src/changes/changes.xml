@@ -37,10 +37,9 @@ and commit
 
 The <action> type attribute can be add,update,fix,remove.
 -->
-
-<document xmlns="http://maven.apache.org/changes/1.0.0"
+<document xmlns="http://maven.apache.org/changes/2.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
+          xsi:schemaLocation="http://maven.apache.org/changes/2.0.0 https://maven.apache.org/xsd/changes-2.0.0.xsd">
   <properties>
     <title>Apache Commons Lang Release Notes</title>
   </properties>
@@ -74,6 +73,11 @@ The <action> type attribute can be add,update,fix,remove.
     <action                   type="fix" dev="ggregory" due-to="Gary Gregory">Moditect plugin generates split package warnings.</action>
     <action                   type="fix" dev="ggregory" due-to="Gary Gregory">LocaleUtils.availableLocaleSet() uses predictable iteration order.</action>
     <action issue="LANG-1759" type="fix" dev="ggregory" due-to="Maxim Butov, Gary Gregory">SerializationUtils.clone(Object) throws ClassCastException when called with a Serializable lambda.</action>
+    <action issue="LANG-1759" type="fix" dev="ggregory" due-to="IBue, Gary Gregory, Piotr P. Karwasz">[StringUtils::indexOfAnyBut] redesign due to inconsistent/faulty behavior regarding UTF-16 surrogates #1327.</action>
+    <action                   type="fix" dev="ggregory" due-to="Gary Gregory">Undeprecate ObjectUtils.toString(Object).</action>
+    <action                   type="fix" dev="ggregory" due-to="Gary Gregory">Fix Spotbugs [ERROR] Medium: The field org.apache.commons.lang3.builder.DiffBuilder$SDiff.leftSupplier is transient but isn't set by deserialization [org.apache.commons.lang3.builder.DiffBuilder$SDiff] In DiffBuilder.java SE_TRANSIENT_FIELD_NOT_RESTORED.</action>
+    <action                   type="fix" dev="ggregory" due-to="Gary Gregory">Fix Spotbugs [ERROR] Medium: The field org.apache.commons.lang3.builder.DiffBuilder$SDiff.rightSupplier is transient but isn't set by deserialization [org.apache.commons.lang3.builder.DiffBuilder$SDiff] In DiffBuilder.java SE_TRANSIENT_FIELD_NOT_RESTORED.</action>
+    <action issue="LANG-1762" type="fix" dev="ggregory" due-to="Alonso Gonzalez, Gary Gregory">StopWatch methods should not delegate to deprecated methods.</action>
     <!-- ADD -->
     <action                   type="add" dev="ggregory" due-to="Gary Gregory">Add Strings and refactor StringUtils.</action>
     <action issue="LANG-1747" type="add" dev="ggregory" due-to="Oliver B. Fischer, Gary Gregory">Add StopWatch.run([Failable]Runnable) and get([Failable]Supplier).</action>
@@ -85,8 +89,13 @@ The <action> type attribute can be add,update,fix,remove.
     <action                   type="add" dev="ggregory" due-to="Gary Gregory">Add ArrayUtils.containsAny(int[], int...).</action>
     <action                   type="add" dev="ggregory" due-to="asgh, Gary Gregory">Add CalendarUtils.toLocalDate() #725.</action>
     <action                   type="add" dev="ggregory" due-to="Gary Gregory">Add SystemUtils.IS_OS_MAC_OSX_SEQUOIA.</action>
+    <action                   type="add" dev="ggregory" due-to="Gary Gregory">Add BasicThreadFactory.builder() and deprecate BasicThreadFactory.Builder().</action>
+    <action                   type="add" dev="ggregory" due-to="Gary Gregory">Add BasicThreadFactory.daemon().</action>
+    <action                   type="add" dev="ggregory" due-to="Gary Gregory">Add ArrayUtils.startsWith.</action>
+    <action                   type="add" dev="ggregory" due-to="Gary Gregory">Add Predicates.</action>
+    <action                   type="add" dev="ggregory" due-to="Gary Gregory">Add RegExUtils methods typed to CharSequence input and deprecate old versions typed to String.</action>
     <!-- UPDATE -->
-    <action                   type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump org.apache.commons:commons-parent from 73 to 78 #1267, #1277, #1283, #1288, #1302.</action>
+    <action                   type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">Bump org.apache.commons:commons-parent from 73 to 79 #1267, #1277, #1283, #1288, #1302.</action>
     <action                   type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">[site] Bump org.codehaus.mojo:taglist-maven-plugin from 3.1.0 to 3.2.1 #1300.</action>
     <action                   type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">[test] Bump org.easymock:easymock from 5.4.0 to 5.5.0 #1317.</action>
     <action                   type="update" dev="ggregory" due-to="Gary Gregory, Dependabot">[test] Bump org.apache.commons:commons-text from 1.12.0 to 1.13.0 #1336.</action> 
@@ -1213,7 +1222,7 @@ The <action> type attribute can be add,update,fix,remove.
     <action type="add" issue="LANG-640">Add normalizeSpace to StringUtils.</action>
     <action type="fix" issue="LANG-638">NumberUtils createNumber throws a StringIndexOutOfBoundsException when argument containing "e" and "E" is passed in.</action>
     <!-- 3.0 beta below here -->
-    <action>NOTE: The below were included in the Commons Lang 3.0-beta release.</action>
+    <action type="add">NOTE: The below were included in the Commons Lang 3.0-beta release.</action>
     <action type="update" issue="LANG-510">Convert StringUtils API to take CharSequence.</action>
     <action type="update">Push down WordUtils to "text" sub-package.</action>
     <action type="add" issue="LANG-610">Extend exception handling in ConcurrentUtils to runtime exceptions.</action>
