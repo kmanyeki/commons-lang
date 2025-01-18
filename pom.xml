@@ -372,6 +372,11 @@
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
         <version>0.8.8</version> <!-- Use the latest version -->
+        <configuration>
+          <excludes>
+            <exclude>org/apache/commons/lang3/RegressionTest0*</exclude>
+         </excludes>
+        </configuration>
         <executions>
           <execution>
             <goals>
