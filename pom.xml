@@ -18,11 +18,11 @@
 <project
   xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-parent</artifactId>
-    <version>78</version>
+    <version>79</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>commons-lang3</artifactId>
@@ -66,7 +66,6 @@
     <dependency>
       <groupId>org.junit-pioneer</groupId>
       <artifactId>junit-pioneer</artifactId>
-      <version>1.9.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -149,6 +148,7 @@
     <argLine>-Xmx512m</argLine>
     <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <!-- project.build.outputTimestamp is managed by Maven plugins, see https://maven.apache.org/guides/mini/guide-reproducible-builds.html -->
     <project.build.outputTimestamp>2024-08-29T19:40:12Z</project.build.outputTimestamp>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -272,6 +272,8 @@
               </manifest>
             </archive>
             <doclint>all</doclint>
+            <!-- Java 8 on GH says: "[WARNING] javadoc: warning - Error fetching URL: https://commons.apache.org/proper/commons-text/apidocs/" -->
+            <!-- <failOnWarnings>true</failOnWarnings> -->
             <additionalDependencies>
               <additionalDependency>
                 <groupId>org.apache.commons</groupId>
